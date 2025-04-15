@@ -21,6 +21,7 @@ export default function App() {
             <Route path="/inscription" element={<SignIn />} />
             <Route path="/profil" element={<Profile />} />
             {/* <Route path='' element={}/> */}
+            {/* <Route path='' element={}/> */}
             <Route
               path="*"
               element={<div>Erreur 404 : cette page n'a pas été trouvée !</div>}

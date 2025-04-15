@@ -6,7 +6,7 @@ export default function HomePage() {
   const navigate = useNavigate();
 
   return (
-    <main>
+    <>
       {/* Section "À la une" sous forme de carrousel */}
       <Carousel />
 
@@ -23,13 +23,12 @@ export default function HomePage() {
           <button
             type="button"
             aria-label="Voir plus d'inspiration"
-            // TODO: Modifier correctement le navigate
-            onClick={() => navigate('/page_recherche')}
+            onClick={() => navigate('/recettes')}
           >
             Voir plus d'inspiration
           </button>
         </div>
       </section>
-    </main>
+    </>
   );
 }

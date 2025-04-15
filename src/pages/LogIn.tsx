@@ -1,4 +1,8 @@
+import { useNavigate } from 'react-router-dom';
+
 export default function LoginPage() {
+  const navigate = useNavigate();
+
   return (
     <div>
       <h1>SE CONNECTER</h1>
@@ -40,7 +44,7 @@ export default function LoginPage() {
       <button
         type="button"
         className="create-account-btn"
-        // onClick={() => }
+        onClick={() => navigate('/inscription')}
         aria-label="Créer un compte"
       >
         Créer un compte

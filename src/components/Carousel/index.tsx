@@ -26,7 +26,7 @@ export default function Carousel() {
             <br />
             <button
               type="button"
-              // onClick={() => }
+              // onClick={() => navigate('/recette/') }
               className="read-more"
               aria-label="Voir la recette à la une"
             >

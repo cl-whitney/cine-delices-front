@@ -17,12 +17,6 @@ export default function Footer() {
           <li>
             <Link to="/a-propos">À propos</Link>
           </li>
-          <li>
-            <Link to="/faq">FAQ</Link>
-          </li>
-          <li>
-            <Link to="/blog">Blog</Link>
-          </li>
         </ul>
       </nav>
       <div className="social-media">
