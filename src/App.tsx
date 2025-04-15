@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer';
 import Header from './components/Header';
+import About from './pages/About';
 import CGU from './pages/CGU';
 import Contact from './pages/Contact';
 import Error404 from './pages/Error404';
@@ -10,7 +11,6 @@ import LogIn from './pages/LogIn';
 import Profile from './pages/Profile';
 import SearchPage from './pages/SearchPage';
 import SignIn from './pages/SignIn';
-import About from './pages/about';
 
 export default function App() {
   return (
