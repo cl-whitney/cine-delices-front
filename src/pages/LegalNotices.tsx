@@ -4,6 +4,7 @@ export default function LegalNotices() {
       aria-label="Mentions légales de CinéDélices"
       className="legal-container"
     >
+      <h1 className="legal-title">Mentions Légales</h1>
       {/* Sommaire */}
       <nav aria-labelledby="sommaire">
         <h2 id="sommaire" className="legal-heading">
@@ -50,8 +51,6 @@ export default function LegalNotices() {
       </nav>
 
       {/* Contenu des mentions légales */}
-      <h1 className="legal-title">Mentions Légales – CinéDélices</h1>
-
       <section id="editeur" className="legal-section">
         <h2 className="legal-heading">1. Éditeur du site</h2>
         <p>

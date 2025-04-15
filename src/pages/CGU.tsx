@@ -5,9 +5,7 @@ export default function Cgu() {
       className="terms-container"
     >
       <div className="terms-content">
-        <h1 className="terms-title">
-          Conditions Générales d’Utilisation – CinéDélices
-        </h1>
+        <h1 className="terms-title">Conditions Générales d’Utilisation</h1>
 
         <nav className="terms-index">
           <h2 className="terms-index-title">Sommaire</h2>
