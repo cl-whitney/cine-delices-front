@@ -12,7 +12,7 @@ export default function Footer() {
             <Link to="/contact">Contact</Link>
           </li>
           <li>
-            <Link to="/conditions-generales">Conditions générales</Link>
+            <Link to="/cgu">Conditions générales</Link>
           </li>
           <li>
             <Link to="/a-propos">À propos</Link>
