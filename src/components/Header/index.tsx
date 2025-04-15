@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import HeaderLogIn from '../HeaderLogIn';
 
 export default function Header() {
@@ -6,9 +7,13 @@ export default function Header() {
       {/* En-tête du site */}
       <nav aria-label="Main navigation" className="navbar">
         {/* Logo du site */}
-        <a href="/" className="navbar-brand" aria-label="Retour à l'accueil">
+        <NavLink
+          to="/"
+          className="navbar-brand"
+          aria-label="Retour à l'accueil"
+        >
           <img src="/images/logo.png" alt="Logo Délices" className="logo" />
-        </a>
+        </NavLink>
 
         {/* Formulaire de recherche */}
         <form
