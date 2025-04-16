@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import './style.css';
 
 export default function Footer() {
   return (
@@ -26,7 +27,7 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="/images/facebook-icon.png" alt="Logo Facebook" />
+          <img src="/src/assets/NetworkLogo/facebook.svg" alt="Logo Facebook" />
         </a>
         <a
           href="https://www.tiktok.com"
@@ -34,7 +35,7 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="/images/tiktok-icon.png" alt="Logo TikTok" />
+          <img src="/src/assets/NetworkLogo/tiktok.svg" alt="Logo TikTok" />
         </a>
         <a
           href="https://www.instagram.com"
@@ -42,7 +43,10 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="/images/instagram-icon.png" alt="Logo Instagram" />
+          <img
+            src="/src/assets/NetworkLogo/instagram.svg"
+            alt="Logo Instagram"
+          />
         </a>
         <a
           href="https://www.pinterest.com"
@@ -50,7 +54,10 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="/images/pinterest-icon.png" alt="Logo Pinterest" />
+          <img
+            src="/src/assets/NetworkLogo/pinterest.svg"
+            alt="Logo Pinterest"
+          />
         </a>
         <a
           href="https://www.youtube.com"
@@ -58,7 +65,7 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="/images/youtube-icon.png" alt="Logo YouTube" />
+          <img src="/src/assets/NetworkLogo/youtube.svg" alt="Logo YouTube" />
         </a>
       </div>
     </footer>

@@ -54,7 +54,6 @@ export default function LegalNotices() {
       <section id="editeur" className="legal-section">
         <h2 className="legal-heading">1. Éditeur du site</h2>
         <p>
-          Le site CinéDélices est édité par :<br />
           <strong>CinéDélices SAS</strong>
           <br />
           Adresse : 42 rue du Cinéma, 75000 Paris, France
@@ -77,7 +76,6 @@ export default function LegalNotices() {
       <section id="hebergeur" className="legal-section">
         <h2 className="legal-heading">2. Hébergeur</h2>
         <p>
-          Le site est hébergé par :<br />
           <strong>OVHASH</strong>
           <br />
           10 Rue des serveurs prend feu, 87000 TresLoin, France
