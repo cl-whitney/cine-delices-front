@@ -11,6 +11,7 @@ import LogIn from './pages/LogIn';
 import Profile from './pages/Profile';
 import SearchPage from './pages/SearchPage';
 import SignIn from './pages/SignIn';
+import './App.css';
 
 export default function App() {
   return (

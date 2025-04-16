@@ -1,0 +1,30 @@
+/* Smartphones (portrait et paysage, jusqu'à 767px) */
+@media (max-width: 767px) {
+  .header {
+    background-color: #eed3d3;
+    display: flex;
+  }
+
+  .navbar {
+  }
+
+  .navbar-brand {
+  }
+
+  .logo {
+  }
+
+  .search-form {
+  }
+
+  .visually-hidden {
+  }
+}
+
+/* Tablettes (768px à 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+/* Ordinateurs de bureau (plus de 1024px) */
+@media (min-width: 1025px) {
+}

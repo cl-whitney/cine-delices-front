@@ -1,9 +1,10 @@
 import { NavLink } from 'react-router-dom';
 import HeaderLogIn from '../HeaderLogIn';
+import './style.css';
 
 export default function Header() {
   return (
-    <header>
+    <header className="header">
       {/* En-tête du site */}
       <nav aria-label="Main navigation" className="navbar">
         {/* Logo du site */}
