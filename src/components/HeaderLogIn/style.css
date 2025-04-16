@@ -1,0 +1,31 @@
+.btnburger {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+
+/* Ici a modifier si on prend un icone plutot qu'un triple span */
+.btnburger span {
+  width: 100%;
+  height: 4px;
+  background-color: black;
+}
+
+.open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 5rem;
+  right: 0;
+  background-color: grey;
+}
+
+/* Smartphones (portrait et paysage, jusqu'à 767px) */
+@media (min-width: 767px) {
+  .btnburger {
+    display: none;
+  }
+}
