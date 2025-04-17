@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './style.css';
 
-// TODO: Il manque la partie avec l'autentification (pb de commit ?)
+// ! Il manque la partie avec l'autentification (pb de commit ?)
 
 export default function HeaderLogIn() {
   //Utilisation du state pour l'état d'ouverture du menu
