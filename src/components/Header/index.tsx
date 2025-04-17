@@ -46,9 +46,11 @@ export default function Header() {
   };
 
   return (
-    <header className="is-fixed-top">
+    <header>
+      {/* à voir pour demain : rajouter la class is-fixed-top pour fix le nav et ensuite adapte
+      le main */}
       <nav className="navbar nav flex-row">
-        <div className="navbar-brand">
+        <div className="navbar-brand navbar-start">
           <Link className="navbar-item" to="/">
             <img src={'src/assets/logo.svg'} alt="Logo" />
             <p>Ciné Délices</p>
