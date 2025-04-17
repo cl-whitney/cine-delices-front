@@ -1,3 +1,5 @@
+import './App.css';
+
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer';
 import Header from './components/Header';
@@ -11,7 +13,6 @@ import LogIn from './pages/LogIn';
 import Profile from './pages/Profile';
 import SearchPage from './pages/SearchPage';
 import SignIn from './pages/SignIn';
-import './App.css';
 
 export default function App() {
   return (

@@ -107,13 +107,13 @@ export default function Cgu() {
           </p>
           <p className="terms-paragraph">Sont interdits :</p>
           <ul className="terms-list">
-            <li>les propos diffamatoires, injurieux ou discriminatoires,</li>
+            <li>- les propos diffamatoires, injurieux ou discriminatoires,</li>
             <li>
-              les contenus à caractère pornographique, violent ou illégal,
+              - les contenus à caractère pornographique, violent ou illégal,
             </li>
             <li>
-              la publication de liens ou de contenus à des fins commerciales non
-              autorisées.
+              - la publication de liens ou de contenus à des fins commerciales
+              non autorisées.
             </li>
           </ul>
         </section>
@@ -132,9 +132,9 @@ export default function Cgu() {
             CinéDélices décline toute responsabilité en cas :
           </p>
           <ul className="terms-list">
-            <li>d’erreurs dans les recettes ou leur exécution,</li>
-            <li>d’allergies ou intolérances alimentaires non mentionnées,</li>
-            <li>de dysfonctionnements techniques affectant le site.</li>
+            <li>- d’erreurs dans les recettes ou leur exécution,</li>
+            <li>- d’allergies ou intolérances alimentaires non mentionnées,</li>
+            <li>- de dysfonctionnements techniques affectant le site.</li>
           </ul>
         </section>
 

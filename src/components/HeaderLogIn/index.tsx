@@ -1,49 +1,70 @@
-import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './style.css';
 
-// ! Il manque la partie avec l'autentification (pb de commit ?)
-
 export default function HeaderLogIn() {
-  //Utilisation du state pour l'état d'ouverture du menu
-  const [menuOpen, setMenuOpen] = useState(false);
-  // Fonction qui permet d'inverser l'état du menu (ici: ouvert / fermé)
-  // Lors de l'appel fonction, menuOpen passe de false à true, ou alors de true à false
-  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const [isActive, setIsActive] = useState(false);
+  const [isMobile, setIsMobile] = useState(false); // Par défaut false, mis à jour après le rendu
+
+  useEffect(() => {
+    // Vérifier la largeur au premier rendu
+    setIsMobile(window.innerWidth < 1024);
+
+    // Écouter les changements de taille
+    const handleResize = () => setIsMobile(window.innerWidth < 1024);
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const toggleMenu = () => setIsActive(!isActive);
 
   return (
-    // Ajouter une condition (Si visiteur alors le code en dessous s'affiche, si utilisateur connecter, alors cf maquettes/wireframe)
-    <nav>
-      <button
-        className="btnBurger"
-        type="button" //Rappel: type="button" pour éviter l'effet submit par défault du <button>
-        onClick={toggleMenu}
-        aria-label="Menu"
-        aria-expanded={menuOpen}
-      >
-        {/* Ici: Mesure temporaire avec l'utilisation des triple span pour imiter un icone de bouton burger */}
-        <span />
-        <span />
-        <span />
-      </button>
-      {/* Affichage dynamique: en fonction de la valeur du state, la classe 'open' est ajoutée ou supprimée */}
-      <ul id="nav-list" className={menuOpen ? 'open' : ''}>
-        <li>
-          <NavLink to="/" aria-label="Accueil">
-            Accueil
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/inscription" aria-label="S'inscrire">
-            S'inscrire
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/connexion" aria-label="Se connecter">
-            Se connecter
-          </NavLink>
-        </li>
-      </ul>
-    </nav>
+    <div className="burger-container">
+      {/* Affichage du bouton burger uniquement en mobile */}
+      {isMobile && (
+        <button
+          type="button"
+          className={`navbar-burger ${isActive ? 'is-active' : ''}`}
+          aria-label="menu"
+          aria-expanded="false"
+          onClick={toggleMenu}
+        >
+          <span aria-hidden="true" />
+          <span aria-hidden="true" />
+          <span aria-hidden="true" />
+        </button>
+      )}
+
+      {/* Affichage du menu déroulant uniquement si actif */}
+      {isMobile && isActive && (
+        <div className={`navbar-item is-right ${isActive ? 'is-active' : ''}`}>
+          <div className="navbar-dropdown">
+            <Link to="/inscription" className="navbar-item">
+              Inscription
+            </Link>
+            <Link to="/connexion" className="navbar-item">
+              Se Connecter
+            </Link>
+          </div>
+        </div>
+      )}
+
+      {/* Affichage des boutons uniquement en desktop */}
+      {!isMobile && (
+        <div className="navbar-end">
+          <div className="navbar-item">
+            <div className="buttons space-between">
+              <Link to="/inscription" className="button btn-color ">
+                Inscription
+              </Link>
+              <Link to="/connexion" className="button log-in">
+                Se Connecter
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
   );
 }

@@ -21,6 +21,7 @@ export default function HomePage() {
         {/* Bouton "Voir plus d'inspiration" */}
         <div className="more-inspiration">
           <button
+            className="button btn-color  is-rounded"
             type="button"
             aria-label="Voir plus d'inspiration"
             onClick={() => navigate('/recettes')}

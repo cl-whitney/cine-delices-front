@@ -1,5 +1,5 @@
 footer {
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .footer-links {
@@ -21,4 +21,8 @@ a {
   background-color: #b71818;
   padding: 1rem;
   justify-content: space-evenly;
+}
+
+.footer-li {
+  text-align: center;
 }

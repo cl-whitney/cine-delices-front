@@ -47,7 +47,7 @@ export default function UserPage() {
               {recipe}
               <button
                 type="button"
-                className="edit-recipe-button"
+                className="button btn-color  is-rounded"
                 aria-label={`Éditer la recette ${index + 1}`}
                 // onClick={() => }
               >
@@ -55,7 +55,7 @@ export default function UserPage() {
               </button>
               <button
                 type="button"
-                className="delete-recipe-button"
+                className="button btn-color  is-rounded"
                 aria-label={`Supprimer la recette ${index + 1}`}
                 // onClick={() => }
               >
@@ -68,7 +68,7 @@ export default function UserPage() {
 
       <button
         type="button"
-        className="add-recipe-button"
+        className="button btn-color  is-rounded"
         aria-label="Ajouter une nouvelle recette"
         // onClick={() => }
       >
@@ -78,7 +78,7 @@ export default function UserPage() {
       {/* Bouton Supprimer le Compte */}
       <button
         type="button"
-        className="delete-account-button"
+        className="button btn-color  is-rounded"
         aria-label="Supprimer mon compte"
         // onClick={() => }
       >

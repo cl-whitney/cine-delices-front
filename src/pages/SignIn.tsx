@@ -71,7 +71,7 @@ export default function AccountCreationPage() {
         </div>
         <button
           type="button"
-          className="login-btn"
+          className="button btn-color  is-rounded"
           // onClick={() => }
           aria-label="S’enregistrer"
         >

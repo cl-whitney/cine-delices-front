@@ -18,14 +18,12 @@ export default function About() {
             culture et redécouvre les plats qui ont marqué l’histoire du grand
             écran tout en régalant tes papilles.
           </p>
-
           <p>
             <strong>Notre histoire</strong> : CinéDélices a été créé par une
             équipe de passionnés de cuisine et de culture pop (films et séries).
             Notre objectif est de partager notre amour de la gastronomie et du
             cinéma avec tous les gourmands et cinéphiles.
           </p>
-
           <p>
             <strong>Notre mission</strong> : Offrir une plateforme conviviale et
             interactive où chacun peut explorer, partager et publier des

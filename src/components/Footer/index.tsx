@@ -6,16 +6,16 @@ export default function Footer() {
     <footer>
       <nav aria-label="Footer navigation">
         <ul className="footer-links">
-          <li>
+          <li className="footer-li">
             <Link to="/mentions-legales">Mentions légales</Link>
           </li>
-          <li>
+          <li className="footer-li">
             <Link to="/contact">Contact</Link>
           </li>
-          <li>
+          <li className="footer-li">
             <Link to="/cgu">Conditions générales</Link>
           </li>
-          <li>
+          <li className="footer-li">
             <Link to="/a-propos">À propos</Link>
           </li>
         </ul>

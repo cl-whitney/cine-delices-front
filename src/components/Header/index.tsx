@@ -1,44 +1,73 @@
-import { NavLink } from 'react-router-dom';
+import { useMediaQuery } from 'react-responsive';
 import HeaderLogIn from '../HeaderLogIn';
 import './style.css';
 
 export default function Header() {
+  const isMobile = useMediaQuery({ maxWidth: 1024 });
+
   return (
     <header className="header">
       {/* En-tête du site */}
-      <nav aria-label="Main navigation" className="navbar">
-        {/* Logo du site */}
-        <NavLink
-          to="/"
-          className="navbar-brand"
-          aria-label="Retour à l'accueil"
-        >
-          <img src="/images/logo.png" alt="Logo Délices" className="logo" />
-        </NavLink>
+      <nav className="navbar" aria-label="main navigation">
+        <div className="navbar-brand">
+          <a className="navbar-item" href="/">
+            <img
+              src={
+                isMobile
+                  ? 'src/assets/logo-desktop.svg'
+                  : 'src/assets/logo-mobile.svg'
+              }
+              alt="Logo Délices"
+              className="logo"
+            />
+          </a>
+        </div>
 
         {/* Formulaire de recherche */}
-        <form
-          className="search-form"
-          aria-label="Formulaire de recherche de recette"
-          onSubmit={(e) => e.preventDefault()}
-        >
-          <label htmlFor="searchInput" className="visually-hidden">
-            Recherche une recette
-          </label>
-          <input
-            type="search"
-            id="searchInput"
-            name="search"
-            placeholder="Recherche une recette..."
-            aria-label="Recherche une recette"
-          />
-          <button
-            type="submit"
-            // onClick={() => }
-          >
-            Rechercher
-          </button>
-        </form>
+        {isMobile ? (
+          <div className="navbar-item has-dropdown is-active">
+            <p className="control">
+              <button
+                className="navbar-link"
+                type="button"
+                aria-label="Rechercher"
+              >
+                <img
+                  src="/src/assets/search.svg"
+                  alt="Icône de loupe"
+                  className="loupe-icon"
+                />
+              </button>
+            </p>
+          </div>
+        ) : (
+          <div className="search-bar">
+            <div className="level-item">
+              <div className="field has-addons">
+                <p className="control">
+                  <input
+                    className="input"
+                    type="text"
+                    placeholder="Chercher une recette..."
+                  />
+                </p>
+                <p className="control">
+                  <button
+                    className="button"
+                    type="button"
+                    aria-label="Rechercher"
+                  >
+                    <img
+                      src="/src/assets/search.svg"
+                      alt="Icône de loupe"
+                      className="loupe-icon"
+                    />
+                  </button>
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
       </nav>
       <HeaderLogIn />
     </header>

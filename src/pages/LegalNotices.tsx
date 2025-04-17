@@ -55,21 +55,20 @@ export default function LegalNotices() {
         <h2 className="legal-heading">1. Éditeur du site</h2>
         <p>
           <strong>CinéDélices SAS</strong>
-          <br />
-          Adresse : 42 rue du Cinéma, 75000 Paris, France
-          <br />
-          Email :{' '}
-          <a href="mailto:contact@CinéDélies.fr">contact@cinedelices.fr</a>
-          <br />
-          Téléphone :{' '}
-          <a
-            href="tel:+3378253695"
-            aria-label="Appeler CinéDélices au 00 78 25 36 95"
-          >
-            00 78 25 36 95
-          </a>
-          <br />
-          Directeur de la publication : Jean-Michel APEUPRE
+          <p>42 rue du Cinéma, 75000 Paris, France</p>
+          <p>
+            <a href="mailto:contact@CinéDélies.fr">
+              Email : contact@cinedelices.fr
+            </a>
+          </p>
+          <p>
+            <a
+              href="tel:+3378253695"
+              aria-label="Appeler CinéDélices au 00 78 25 36 95"
+            >
+              éléphone : 00 78 25 36 95
+            </a>
+          </p>
         </p>
       </section>
 
@@ -77,10 +76,8 @@ export default function LegalNotices() {
         <h2 className="legal-heading">2. Hébergeur</h2>
         <p>
           <strong>OVHASH</strong>
-          <br />
-          10 Rue des serveurs prend feu, 87000 TresLoin, France
-          <br />
-          Téléphone : 00 10 08 19 88
+          <p>10 Rue des serveurs prend feu, 87000 TresLoin, France</p>
+          <p>Téléphone : 00 10 08 19 88</p>
         </p>
       </section>
 
