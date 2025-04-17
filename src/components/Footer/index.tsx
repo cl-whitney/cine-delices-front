@@ -1,3 +1,11 @@
+import {
+  faFacebook,
+  faInstagram,
+  faPinterest,
+  faTiktok,
+  faYoutube,
+} from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 import './style.css';
 
@@ -27,7 +35,11 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="/src/assets/NetworkLogo/facebook.svg" alt="Logo Facebook" />
+          <FontAwesomeIcon
+            icon={faFacebook}
+            className="icon"
+            aria-label="logo facebook"
+          />
         </a>
         <a
           href="https://www.tiktok.com"
@@ -35,7 +47,11 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="/src/assets/NetworkLogo/tiktok.svg" alt="Logo TikTok" />
+          <FontAwesomeIcon
+            icon={faTiktok}
+            className="icon"
+            aria-label="logo tiktok"
+          />
         </a>
         <a
           href="https://www.instagram.com"
@@ -43,9 +59,10 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
-            src="/src/assets/NetworkLogo/instagram.svg"
-            alt="Logo Instagram"
+          <FontAwesomeIcon
+            icon={faInstagram}
+            className="icon"
+            aria-label="logo instagram"
           />
         </a>
         <a
@@ -54,9 +71,10 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
-            src="/src/assets/NetworkLogo/pinterest.svg"
-            alt="Logo Pinterest"
+          <FontAwesomeIcon
+            icon={faPinterest}
+            className="icon"
+            aria-label="logo pinterest"
           />
         </a>
         <a
@@ -65,7 +83,11 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="/src/assets/NetworkLogo/youtube.svg" alt="Logo YouTube" />
+          <FontAwesomeIcon
+            icon={faYoutube}
+            className="icon"
+            aria-label="logo youtube"
+          />
         </a>
       </div>
     </footer>
