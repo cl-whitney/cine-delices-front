@@ -1,75 +1,118 @@
-import { useMediaQuery } from 'react-responsive';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useEffect, useRef, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import HeaderLogIn from '../HeaderLogIn';
+
 import './style.css';
 
 export default function Header() {
-  const isMobile = useMediaQuery({ maxWidth: 1024 });
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
+  const [showSearch, setShowSearch] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const navigate = useNavigate();
+
+  // Ajout de useRef pour détecter les clics en dehors du champ de recherche
+  const searchRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Gère la mise à jour de l'état isMobile lors du redimensionnement de la fenêtre
+    const handleResize = () => setIsMobile(window.innerWidth < 1024);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
+    // Ferme le champ de recherche lorsque l'on clique en dehors
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        showSearch &&
+        searchRef.current &&
+        !searchRef.current.contains(event.target as Node)
+      ) {
+        setShowSearch(false);
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [showSearch]);
+
+  const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    navigate(`/search?query=${searchQuery}`); // Redirige vers la page de recherche
+  };
 
   return (
-    <header className="header">
-      {/* En-tête du site */}
-      <nav className="navbar" aria-label="main navigation">
+    <header className="is-fixed-top">
+      <nav className="navbar nav flex-row">
         <div className="navbar-brand">
-          <a className="navbar-item" href="/">
-            <img
-              src={
-                isMobile
-                  ? 'src/assets/logo-desktop.svg'
-                  : 'src/assets/logo-mobile.svg'
-              }
-              alt="Logo Délices"
-              className="logo"
-            />
-          </a>
+          <Link className="navbar-item" to="/">
+            <img src={'src/assets/logo.svg'} alt="Logo" />
+            <p>Ciné Délices</p>
+          </Link>
         </div>
 
-        {/* Formulaire de recherche */}
-        {isMobile ? (
-          <div className="navbar-item has-dropdown is-active">
-            <p className="control">
-              <button
-                className="navbar-link"
-                type="button"
-                aria-label="Rechercher"
-              >
-                <img
-                  src="/src/assets/search.svg"
-                  alt="Icône de loupe"
-                  className="loupe-icon"
+        <div className="navbar-end">
+          {!isMobile ? (
+            /* Affichage en desktop */
+            <div className="navbar-item">
+              <form onSubmit={handleSearch} className="flex-row">
+                <input
+                  className="input"
+                  type="text"
+                  placeholder="Rechercher..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
                 />
-              </button>
-            </p>
-          </div>
-        ) : (
-          <div className="search-bar">
-            <div className="level-item">
-              <div className="field has-addons">
-                <p className="control">
-                  <input
-                    className="input"
-                    type="text"
-                    placeholder="Chercher une recette..."
-                  />
-                </p>
-                <p className="control">
+                <button className="button btn-color" type="submit">
+                  Chercher
+                </button>
+              </form>
+            </div>
+          ) : (
+            /* Affichage en mobile */
+            <div className="navbar-end">
+              <div className="navbar-item">
+                {/* Affiche le bouton uniquement si le champ de recherche n'est pas affiché */}
+                {!showSearch && (
                   <button
-                    className="button"
                     type="button"
-                    aria-label="Rechercher"
+                    className="button"
+                    onClick={(event) => {
+                      event.stopPropagation(); // Empêche la fermeture immédiate
+                      setShowSearch(true);
+                    }}
                   >
-                    <img
-                      src="/src/assets/search.svg"
-                      alt="Icône de loupe"
-                      className="loupe-icon"
-                    />
+                    <FontAwesomeIcon icon={faSearch} />
                   </button>
-                </p>
+                )}
               </div>
             </div>
+          )}
+        </div>
+
+        {/* Champ de recherche qui apparaît en mobile */}
+        {isMobile && showSearch && (
+          <div ref={searchRef} className="navbar-item is-expanded">
+            <form onSubmit={handleSearch} className="is-flex">
+              <input
+                className="input"
+                type="text"
+                placeholder="Rechercher..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+              <button className="button btn-color" type="submit">
+                <FontAwesomeIcon icon={faSearch} />
+              </button>
+            </form>
           </div>
         )}
+        <HeaderLogIn />
       </nav>
-      <HeaderLogIn />
     </header>
   );
 }

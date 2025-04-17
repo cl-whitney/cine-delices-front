@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+
 import './style.css';
 
 export default function HeaderLogIn() {
@@ -20,7 +21,7 @@ export default function HeaderLogIn() {
   const toggleMenu = () => setIsActive(!isActive);
 
   return (
-    <div className="burger-container">
+    <div className="burger-container navbar-end">
       {/* Affichage du bouton burger uniquement en mobile */}
       {isMobile && (
         <button

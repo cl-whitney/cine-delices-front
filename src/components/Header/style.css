@@ -1,24 +1,8 @@
-.header {
+.nav {
   background-color: #eee3d3;
+}
+
+.flex-row {
   display: flex;
-  justify-content: space-between;
-  height: 4rem;
-}
-
-.loupe-icon {
-  width: 25px;
-  height: 14px;
-}
-
-.logo {
-  object-fit: contain;
-  height: 6rem;
-}
-
-.search-bar {
-  background-color: #eee3d3;
-}
-
-.navbar-brand {
-  background-color: #eee3d3;
+  flex-direction: row;
 }
