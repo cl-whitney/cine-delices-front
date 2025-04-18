@@ -1,4 +1,5 @@
 import './App.css';
+import './assets/fonts/fonts.css';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer';
