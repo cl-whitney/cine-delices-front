@@ -21,7 +21,7 @@ export default function App() {
       <BrowserRouter>
         {/* En-tête du site */}
         <Header />
-        <main className="container">
+        <div className="main-container">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/recettes" element={<SearchPage />} />
@@ -35,7 +35,7 @@ export default function App() {
             {/* <Route path='' element={}/> */}
             <Route path="*" element={<Error404 />} />
           </Routes>
-        </main>
+        </div>
         <Footer />
       </BrowserRouter>
     </>
