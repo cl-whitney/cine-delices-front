@@ -52,7 +52,7 @@ export default function Header() {
       <nav className="navbar nav flex-row">
         <div className="navbar-brand navbar-start">
           <Link className="navbar-item" to="/">
-            <img src={'src/assets/logo.svg'} alt="Logo" />
+            <img src={'src/assets/logo.svg'} alt="Logo" loading="lazy" />
             <p>Ciné Délices</p>
           </Link>
         </div>
