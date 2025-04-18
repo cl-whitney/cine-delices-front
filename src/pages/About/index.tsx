@@ -2,7 +2,7 @@ import './style.css';
 
 export default function About() {
   return (
-    <main
+    <div
       aria-label="Section À propos de CinéDélices"
       className="about-container"
     >
@@ -35,6 +35,6 @@ export default function About() {
           </p>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

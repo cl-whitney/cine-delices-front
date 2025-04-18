@@ -12,7 +12,7 @@ export default function UserPage() {
           style={{ color: 'var(--button-color)' }}
           aria-label="Icône utilisateur"
         />
-        <h1>Page utilisateur</h1>
+        <h1>Utilisateur</h1>
       </div>
 
       {/* Section Informations Personnelles */}

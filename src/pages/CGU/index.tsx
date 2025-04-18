@@ -2,7 +2,7 @@ import './style.css';
 
 export default function Cgu() {
   return (
-    <main
+    <div
       aria-label="Conditions Générales d’Utilisation de CinéDélices"
       className="terms-container"
     >
@@ -180,6 +180,6 @@ export default function Cgu() {
           </p>
         </section>
       </div>
-    </main>
+    </div>
   );
 }

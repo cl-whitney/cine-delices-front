@@ -2,7 +2,7 @@ import './style.css';
 
 export default function Contact() {
   return (
-    <main
+    <div
       aria-label="Page de contact de CinéDélices"
       className="contact-container"
     >
@@ -31,6 +31,6 @@ export default function Contact() {
           </p>
         </address>
       </section>
-    </main>
+    </div>
   );
 }

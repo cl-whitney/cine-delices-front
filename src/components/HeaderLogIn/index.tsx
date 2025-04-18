@@ -30,6 +30,8 @@ export default function HeaderLogIn() {
       }
     };
 
+    // TODO : Fix bug addEventListener
+
     document.addEventListener('clic', handleClickOutside);
     return () => document.removeEventListener('clic', handleClickOutside);
   }, [isActive]);

@@ -6,28 +6,14 @@ import {
   faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useEffect, useState } from 'react';
+import {} from 'react';
 import { Link } from 'react-router-dom';
 
 import './style.css';
 
 export default function Footer() {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY + window.innerHeight;
-      const pageHeight = document.documentElement.scrollHeight;
-
-      //Ajustement pour éviter l'affichage du footer trop tôt
-      setIsVisible(scrollPosition >= pageHeight - 50);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  });
   return (
-    <div className={`footer-contanier ${isVisible ? 'visible' : ''}`}>
+    <div>
       <footer>
         <nav aria-label="Footer navigation">
           <ul className="footer-links">

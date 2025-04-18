@@ -2,7 +2,7 @@ import './style.css';
 
 export default function LegalNotices() {
   return (
-    <main
+    <div
       aria-label="Mentions légales de CinéDélices"
       className="legal-container"
     >
@@ -118,6 +118,6 @@ export default function LegalNotices() {
           cas de litige, seuls les tribunaux français sont compétents.
         </p>
       </section>
-    </main>
+    </div>
   );
 }

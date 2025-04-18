@@ -2,7 +2,7 @@ import './style.css';
 
 export default function NotFound() {
   return (
-    <main aria-labelledby="error-heading" className="error-container">
+    <div aria-labelledby="error-heading" className="error-container">
       <section className="error-section">
         <header>
           <h1 id="error-heading" className="error-title">
@@ -21,6 +21,6 @@ export default function NotFound() {
           </p>
         </div>
       </section>
-    </main>
+    </div>
   );
 }
