@@ -1,0 +1,28 @@
+.footer-links {
+  background-color: #f5f5dc;
+  list-style: none;
+  padding: 1rem;
+  margin: 0;
+}
+
+.social-media {
+  display: flex;
+  background-color: #b71818;
+  padding: 1rem;
+  justify-content: space-evenly;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  margin: 0;
+}
+
+.icon {
+  color: white;
+}
+
+.footer-li {
+  text-align: center;
+}

@@ -4,31 +4,25 @@ import { useEffect, useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import HeaderLogIn from '../HeaderLogIn';
 
-import './style.css';
-
 export default function Header() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
   const [showSearch, setShowSearch] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const navigate = useNavigate();
 
-  // Ajout de useRef pour détecter les clics en dehors du champ de recherche
   const searchRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Gère la mise à jour de l'état isMobile lors du redimensionnement de la fenêtre
     const handleResize = () => setIsMobile(window.innerWidth < 1024);
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   useEffect(() => {
-    // Ferme le champ de recherche lorsque l'on clique en dehors
     const handleClickOutside = (event: MouseEvent) => {
       if (
         showSearch &&
         searchRef.current &&
-        // Si l'utilisateur clique en dehors du champ de recherche, alors on le ferme
         !searchRef.current.contains(event.target as Node)
       ) {
         setShowSearch(false);
@@ -43,77 +37,78 @@ export default function Header() {
 
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    navigate(`/search?query=${searchQuery}`); // Redirige vers la page de recherche
+    navigate(`/search?query=${searchQuery}`);
   };
 
   return (
-    <header>
-      {/* à voir pour demain : rajouter la class is-fixed-top pour fix le nav et ensuite adapte
-      le main */}
-      <nav className="navbar nav flex-row">
-        <div className="navbar-brand navbar-start">
-          <Link className="navbar-item" to="/">
-            <img src={'src/assets/logo.svg'} alt="Logo" loading="lazy" />
-            <p>Ciné Délices</p>
+    <header className="p-4 bg-base-100 shadow-md">
+      <nav className="flex justify-between items-center">
+        <div className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center text-lg font-semibold">
+            <img
+              src={'src/assets/logo.svg'}
+              alt="Logo"
+              loading="lazy"
+              className="h-10"
+            />
+            <p className="ml-2">Ciné Délices</p>
           </Link>
         </div>
 
-        <div className="navbar-end">
+        <div className="flex items-center space-x-4">
           {!isMobile ? (
-            /* Affichage en desktop */
-            <div className="navbar-item">
-              <form onSubmit={handleSearch} className="flex-row">
-                <input
-                  className="input"
-                  type="text"
-                  placeholder="Rechercher..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                />
-                <button className="button btn-color" type="submit">
-                  Chercher
-                </button>
-              </form>
-            </div>
-          ) : (
-            /* Affichage en mobile */
-            <div className="navbar-end">
-              <div className="navbar-item">
-                {/* Affiche le bouton uniquement si le champ de recherche n'est pas affiché */}
-                {!showSearch && (
-                  <button
-                    type="button"
-                    className="button"
-                    onClick={(event) => {
-                      event.stopPropagation(); // Empêche la fermeture immédiate
-                      setShowSearch(true);
-                    }}
-                  >
-                    <FontAwesomeIcon icon={faSearch} />
-                  </button>
-                )}
-              </div>
-            </div>
-          )}
-        </div>
-
-        {/* Champ de recherche qui apparaît en mobile */}
-        {isMobile && showSearch && (
-          <div ref={searchRef} className="navbar-item is-expanded">
-            <form onSubmit={handleSearch} className="is-flex">
+            <form
+              onSubmit={handleSearch}
+              className="flex items-center space-x-2"
+            >
               <input
-                className="input"
+                className="input input-bordered"
                 type="text"
                 placeholder="Rechercher..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
-              <button className="button btn-color" type="submit">
+              <button className="btn btn-primary" type="submit">
+                Chercher
+              </button>
+            </form>
+          ) : (
+            <button
+              type="button"
+              className="btn btn-circle btn-outline"
+              onClick={(event) => {
+                event.stopPropagation();
+                setShowSearch(true);
+              }}
+            >
+              <FontAwesomeIcon icon={faSearch} />
+            </button>
+          )}
+        </div>
+
+        {isMobile && showSearch && (
+          <div
+            ref={searchRef}
+            className="absolute top-16 left-0 w-full p-4 bg-base-200"
+          >
+            <form
+              onSubmit={handleSearch}
+              className="flex items-center space-x-2"
+            >
+              <input
+                className="input input-bordered w-full"
+                type="text"
+                placeholder="Rechercher..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+              <button className="btn btn-primary" type="submit">
                 <FontAwesomeIcon icon={faSearch} />
               </button>
             </form>
           </div>
         )}
+
         <HeaderLogIn />
       </nav>
     </header>

@@ -1,21 +1,16 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import './style.css';
-
 export default function HeaderLogIn() {
   const [isActive, setIsActive] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Vérifier la largeur au premier rendu
     setIsMobile(window.innerWidth < 1024);
 
-    // Écouter les changements de taille
     const handleResize = () => setIsMobile(window.innerWidth < 1024);
     window.addEventListener('resize', handleResize);
-
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
@@ -30,61 +25,52 @@ export default function HeaderLogIn() {
       }
     };
 
-    // TODO : Fix bug addEventListener
-
-    document.addEventListener('clic', handleClickOutside);
-    return () => document.removeEventListener('clic', handleClickOutside);
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
   }, [isActive]);
 
   const toggleMenu = () => setIsActive(!isActive);
 
   return (
-    <div className="burger-container navbar-end">
-      {/* Affichage du bouton burger uniquement en mobile */}
+    <div className="flex justify-end">
+      {/* Bouton burger visible en mobile */}
       {isMobile && (
         <button
           type="button"
-          className={`navbar-burger ${isActive ? 'is-active' : ''}`}
+          className={`btn btn-square btn-outline ${isActive ? 'bg-base-300' : ''}`}
           aria-label="menu"
-          aria-expanded="false"
           onClick={toggleMenu}
         >
-          <span aria-hidden="true" />
-          <span aria-hidden="true" />
-          <span aria-hidden="true" />
+          <span className="block w-6 h-0.5 bg-gray-700 mb-1" />
+          <span className="block w-6 h-0.5 bg-gray-700 mb-1" />
+          <span className="block w-6 h-0.5 bg-gray-700" />
         </button>
       )}
 
-      {/* Affichage du menu déroulant uniquement si actif */}
+      {/* Menu déroulant mobile */}
       {isMobile && isActive && (
         <div
           ref={menuRef}
-          className={`navbar-item is-right ${isActive ? 'is-active' : ''}`}
+          className="absolute right-4 mt-2 bg-base-100 shadow-lg rounded-lg p-4"
         >
-          <div className="navbar-dropdown position">
-            <Link to="/inscription" className="navbar-item">
-              Inscription
-            </Link>
-            <Link to="/connexion" className="navbar-item">
-              Se Connecter
-            </Link>
-          </div>
+          <Link to="/inscription" className="block px-4 py-2 hover:bg-base-200">
+            Inscription
+          </Link>
+          <Link to="/connexion" className="block px-4 py-2 hover:bg-base-200">
+            Se Connecter
+          </Link>
         </div>
       )}
 
-      {/* Affichage des boutons uniquement en desktop */}
+      {/* Boutons visibles en desktop */}
       {!isMobile && (
-        <div className="navbar-end">
-          <div className="navbar-item">
-            <div className="buttons space-between">
-              <Link to="/inscription" className="button btn-color ">
-                Inscription
-              </Link>
-              <Link to="/connexion" className="button log-in">
-                Se Connecter
-              </Link>
-            </div>
-          </div>
+        <div className="flex space-x-4">
+          <Link to="/inscription" className="btn btn-primary">
+            Inscription
+          </Link>
+          <Link to="/connexion" className="btn btn-outline log-in">
+            Se Connecter
+          </Link>
         </div>
       )}
     </div>

@@ -28,7 +28,7 @@ export default function Carousel() {
             <button
               type="button"
               // onClick={() => navigate('/recette/') }
-              className="button btn-color  is-rounded"
+              className="btn btn-lg btn-circle btn-warning"
               aria-label="Voir la recette à la une"
             >
               Voir plus
