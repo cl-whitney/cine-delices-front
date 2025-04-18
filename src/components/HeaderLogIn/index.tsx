@@ -1,11 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import './style.css';
 
 export default function HeaderLogIn() {
   const [isActive, setIsActive] = useState(false);
-  const [isMobile, setIsMobile] = useState(false); // Par défaut false, mis à jour après le rendu
+  const [isMobile, setIsMobile] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Vérifier la largeur au premier rendu
@@ -17,6 +18,21 @@ export default function HeaderLogIn() {
 
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        isActive &&
+        menuRef.current &&
+        !menuRef.current.contains(event.target as Node)
+      ) {
+        setIsActive(false);
+      }
+    };
+
+    document.addEventListener('clic', handleClickOutside);
+    return () => document.removeEventListener('clic', handleClickOutside);
+  }, [isActive]);
 
   const toggleMenu = () => setIsActive(!isActive);
 
@@ -39,8 +55,11 @@ export default function HeaderLogIn() {
 
       {/* Affichage du menu déroulant uniquement si actif */}
       {isMobile && isActive && (
-        <div className={`navbar-item is-right ${isActive ? 'is-active' : ''}`}>
-          <div className="navbar-dropdown">
+        <div
+          ref={menuRef}
+          className={`navbar-item is-right ${isActive ? 'is-active' : ''}`}
+        >
+          <div className="navbar-dropdown position">
             <Link to="/inscription" className="navbar-item">
               Inscription
             </Link>

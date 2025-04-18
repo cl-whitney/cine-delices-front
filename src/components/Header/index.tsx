@@ -28,6 +28,7 @@ export default function Header() {
       if (
         showSearch &&
         searchRef.current &&
+        // Si l'utilisateur clique en dehors du champ de recherche, alors on le ferme
         !searchRef.current.contains(event.target as Node)
       ) {
         setShowSearch(false);
