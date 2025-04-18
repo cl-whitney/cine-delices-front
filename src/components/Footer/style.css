@@ -1,5 +1,14 @@
-footer {
+.footer-container {
   margin-top: 2rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+}
+
+.footer-container .visible {
+  opacity: 1;
 }
 
 .footer-links {
