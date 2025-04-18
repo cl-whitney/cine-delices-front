@@ -1,0 +1,6 @@
+/*    MENU DEROULANT    */
+
+.dropdown {
+  display: flex;
+  justify-content: space-evenly;
+}

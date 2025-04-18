@@ -67,10 +67,3 @@ strong {
   color: white;
   font-weight: 600;
 }
-
-/*    MENU DEROULANT    */
-
-.dropdown {
-  display: flex;
-  justify-content: space-evenly;
-}

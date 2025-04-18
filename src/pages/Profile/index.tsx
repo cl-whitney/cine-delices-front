@@ -1,3 +1,5 @@
+import './style.css';
+
 export default function UserPage() {
   return (
     <div>
@@ -7,32 +9,34 @@ export default function UserPage() {
       </div>
 
       {/* Section Informations Personnelles */}
-      <section aria-labelledby="personal-info">
-        <h2 id="personal-info">Informations personnelles</h2>
-        <form>
-          <label htmlFor="username">Nom (ou Pseudo)</label>
-          <input
-            type="text"
-            id="username"
-            name="username"
-            placeholder="Entrez votre nom ou pseudo"
-          />
-          <label htmlFor="firstname">Prénom</label>
-          <input
-            type="text"
-            id="firstname"
-            name="firstname"
-            placeholder="Entrez votre prénom"
-          />
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Entrez votre email"
-          />
-        </form>
-      </section>
+      <div className="personal-info-div">
+        <section aria-labelledby="personal-info">
+          <h2 id="personal-info">Informations personnelles</h2>
+          <form>
+            <label htmlFor="username">Nom (ou Pseudo)</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Entrez votre nom ou pseudo"
+            />
+            <label htmlFor="firstname">Prénom</label>
+            <input
+              type="text"
+              id="firstname"
+              name="firstname"
+              placeholder="Entrez votre prénom"
+            />
+            <label htmlFor="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Entrez votre email"
+            />
+          </form>
+        </section>
+      </div>
 
       {/* Section Recettes */}
       <section aria-labelledby="recipes">
