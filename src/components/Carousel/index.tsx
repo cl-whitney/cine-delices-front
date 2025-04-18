@@ -11,6 +11,7 @@ export default function Carousel() {
             <img
               src="/images/retour-vers-le-futur.jpg"
               alt="Plat Retour vers le futur"
+              loading="lazy"
             />
             <figcaption>Recette inspirée d’un univers futuriste</figcaption>
           </figure>

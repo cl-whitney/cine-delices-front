@@ -2,7 +2,11 @@ export default function Card() {
   return (
     <>
       <article className="card">
-        <img src="/images/salade-frodon.jpg" alt="Salade périfée de Frodon" />
+        <img
+          src="/images/salade-frodon.jpg"
+          alt="Salade périfée de Frodon"
+          loading="lazy"
+        />
         <h3>La salade périfée de Frodon</h3>
         {/* Ajouter un lien vers la page recette correspondante */}
         {/* <Link

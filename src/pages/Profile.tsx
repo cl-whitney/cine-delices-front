@@ -2,7 +2,7 @@ export default function UserPage() {
   return (
     <div>
       <div>
-        <img src="#" alt="Avatar de profil" />
+        <img src="#" alt="Avatar de profil" loading="lazy" />
         <h1>Page utilisateur</h1>
       </div>
 
