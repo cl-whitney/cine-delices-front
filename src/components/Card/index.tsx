@@ -1,56 +1,14 @@
 export default function Card() {
   return (
     <>
-      <article className="card">
+      <article className="card flex flex-col items-center rounded-lg p-4">
         <img
           src="./src/assets/recipe.jpg"
           alt="Salade périfée de Frodon"
           loading="lazy"
-          className="w-32 h-32 object-cover" // Réduit la taille de l'image
+          className="w-64 h-52 object-cover rounded-lg mb-4 shadow-lg"
         />
-        <h3>La salade périfée de Frodon</h3>
-        {/* Ajouter un lien vers la page recette correspondante */}
-        {/* <Link
-          href="#"
-          aria-label="Voir la recette : La salade périfée de Frodon"
-        /> */}
-      </article>
-      <article className="card">
-        <img
-          src="./src/assets/recipe.jpg"
-          alt="Salade périfée de Frodon"
-          loading="lazy"
-          className="w-32 h-32 object-cover" // Réduit la taille de l'image
-        />
-        <h3>La salade périfée de Frodon</h3>
-        {/* Ajouter un lien vers la page recette correspondante */}
-        {/* <Link
-          href="#"
-          aria-label="Voir la recette : La salade périfée de Frodon"
-        /> */}
-      </article>
-      <article className="card">
-        <img
-          src="./src/assets/recipe.jpg"
-          alt="Salade périfée de Frodon"
-          loading="lazy"
-          className="w-32 h-32 object-cover" // Réduit la taille de l'image
-        />
-        <h3>La salade périfée de Frodon</h3>
-        {/* Ajouter un lien vers la page recette correspondante */}
-        {/* <Link
-          href="#"
-          aria-label="Voir la recette : La salade périfée de Frodon"
-        /> */}
-      </article>
-      <article className="card">
-        <img
-          src="./src/assets/recipe.jpg"
-          alt="Salade périfée de Frodon"
-          loading="lazy"
-          className="w-32 h-32 object-cover" // Réduit la taille de l'image
-        />
-        <h3>La salade périfée de Frodon</h3>
+        <h3 className="text-center">La salade périfée de Frodon</h3>
         {/* Ajouter un lien vers la page recette correspondante */}
         {/* <Link
           href="#"

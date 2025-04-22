@@ -54,7 +54,7 @@ export default function LegalNotices() {
       <section id="editeur" className="legal-section">
         <h2 className="legal-heading scroll-mt-20">1. Éditeur du site</h2>
         <p>
-          <strong className="font-bold text-lg md:text-base md:font-bold">
+          <strong className="font-bold text-lg md:font-bold">
             CinéDélices SAS
           </strong>
           <p>42 rue du Cinéma</p>
@@ -78,9 +78,7 @@ export default function LegalNotices() {
       <section id="hebergeur" className="legal-section">
         <h2 className="legal-heading scroll-mt-20">2. Hébergeur</h2>
         <p>
-          <strong className="font-bold text-lg md:text-base md:font-bold">
-            OVHASH
-          </strong>
+          <strong className="font-bold text-lg md:font-bold">OVHASH</strong>
           <p>10 Rue des serveurs prennent feu</p>
           <p>87000 TresLoin, France</p>
           <p>Téléphone : 00 10 08 19 88</p>

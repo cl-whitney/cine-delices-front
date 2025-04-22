@@ -10,7 +10,7 @@ export default function About() {
         </header>
         <div className="about-content">
           <p>
-            <strong className="font-bold text-lg md:text-base md:font-bold">
+            <strong className="font-bold text-lg md:font-bold">
               CinéDélices
             </strong>{' '}
             : est un site unique qui fusionne deux passions : le cinéma et la
@@ -22,7 +22,7 @@ export default function About() {
             en régalant tes papilles.
           </p>
           <p>
-            <strong className="font-bold text-lg md:text-base md:font-bold">
+            <strong className="font-bold text-lg md:font-bold">
               Notre histoire
             </strong>{' '}
             : CinéDélices a été créé par une équipe de passionnés de cuisine et
@@ -31,7 +31,7 @@ export default function About() {
             et cinéphiles.
           </p>
           <p>
-            <strong className="font-bold text-lg md:text-base md:font-bold">
+            <strong className="font-bold text-lg md:font-bold">
               Notre mission
             </strong>{' '}
             : Offrir une plateforme conviviale et interactive où chacun peut

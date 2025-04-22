@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 export default function Footer() {
   return (
     <div>
-      <footer className="shadow-[0_-2px_5px_rgba(0,0,0,0.1)] fixed bottom-0 left-0 w-full z-10">
+      <footer className="shadow-[0_-25px_15px_rgba(0,0,0,0.1)] fixed bottom-0 left-0 w-full z-10">
         <nav
           aria-label="Footer navigation"
           className="bg-[var(--background-color)] p-4"

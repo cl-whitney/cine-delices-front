@@ -41,7 +41,7 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 w-full bg-[var(--background-color)] shadow-md z-1000 p-4">
+    <header className="fixed top-0 w-full bg-[var(--background-color)] shadow-2xl z-1000 p-4">
       <nav className="flex justify-between items-center">
         <div className="flex items-center space-x-2">
           <Link to="/" className="flex items-center text-lg font-semibold">
@@ -57,23 +57,24 @@ export default function Header() {
 
         <div className="flex items-center space-x-4">
           {!isMobile ? (
-            <form
-              onSubmit={handleSearch}
-              className="flex items-center space-x-2"
-            >
-              <input
-                className="input input-bordered rounded-full focus:outline-none"
-                type="text"
-                placeholder="Rechercher..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-              />
-              <button
-                className="btn btn-primary bg-[var(--button-color)]  border-none rounded-full p-2 aspect-square  text-white"
-                type="submit"
-              >
-                <FontAwesomeIcon icon={faSearch} />
-              </button>
+            <form onSubmit={handleSearch}>
+              <div className="flex flex-row items-center w-96">
+                <input
+                  type="text"
+                  placeholder="Rechercher..."
+                  className="input rounded-l-full focus:outline-none border-0 w-full"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  style={{ height: '40px' }}
+                />
+                <button
+                  type="submit"
+                  className="btn bg-white text-black rounded-r-full border-0"
+                  style={{ height: '40px', width: '40px' }}
+                >
+                  <FontAwesomeIcon icon={faSearch} color="black" />
+                </button>
+              </div>
             </form>
           ) : (
             <button
@@ -98,19 +99,23 @@ export default function Header() {
               onSubmit={handleSearch}
               className="flex items-center space-x-2"
             >
-              <input
-                className="input input-bordered w-full rounded-full focus:outline-none"
-                type="text"
-                placeholder="Rechercher..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-              />
-              <button
-                className="btn btn-primary bg-[var(--button-color)] border-none rounded-full p-2 aspect-square  text-white"
-                type="submit"
-              >
-                Valider
-              </button>
+              <div className="flex flex-row items-center w-full">
+                <input
+                  type="text"
+                  placeholder="Rechercher..."
+                  className="input rounded-l-full focus:outline-none border-0 w-full"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  style={{ height: '40px' }}
+                />
+                <button
+                  type="submit"
+                  className="btn bg-white text-black rounded-r-full border-0"
+                  style={{ height: '40px', width: '40px' }}
+                >
+                  <FontAwesomeIcon icon={faSearch} color="black" />
+                </button>
+              </div>
             </form>
           </div>
         )}

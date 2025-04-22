@@ -1,104 +1,120 @@
 import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { faUtensils } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function UserPage() {
   return (
     <div>
-      <div className="title-personnal-info">
+      <div className="flex items-center gap-2">
         <FontAwesomeIcon
           icon={faUser}
-          size="2xl"
+          size="xl"
           style={{ color: 'var(--button-color)' }}
           aria-label="Icône utilisateur"
         />
-        <h1>Utilisateur</h1>
+        <h2 className="text-shadow-lg">Informations personnelles</h2>
       </div>
 
       {/* Section Informations Personnelles */}
-      <div className="personal-info-div">
-        <section aria-labelledby="personal-info">
-          <h2 id="personal-info">Informations personnelles</h2>
-          <form className="personal-info-form">
-            <div>
-              <label htmlFor="username">Nom (ou Pseudo)</label>
-              <input
-                type="text"
-                id="username"
-                name="username"
-                placeholder="Entrez votre nom ou pseudo"
-              />
-            </div>
-            <div>
-              <label htmlFor="firstname">Prénom</label>
-              <input
-                type="text"
-                id="firstname"
-                name="firstname"
-                placeholder="Entrez votre prénom"
-              />
-            </div>
-            <div className="full-width">
-              <label htmlFor="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Entrez votre email"
-              />
-            </div>
-          </form>
-        </section>
+      <div className="w-full max-w-4xl border-2 border-gray-300 rounded-lg px-8 py-4 my-4 shadow-2xl sm:max-w-5xl sm:py-8">
+        <form className="flex flex-col gap-6">
+          <div className="flex flex-col">
+            <label htmlFor="username" className="mb-1 font-bold">
+              Nom
+            </label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Entrez votre nom ou pseudo"
+              aria-label="Nom ou Pseudo"
+              className="border-b-2 border-gray-300 focus:outline-none focus:border-[var(--button-color)]"
+            />
+          </div>
+          <div className="flex flex-col">
+            <label htmlFor="firstname" className="mb-1 font-bold">
+              Prénom
+            </label>
+            <input
+              type="text"
+              id="firstname"
+              name="firstname"
+              placeholder="Entrez votre prénom"
+              aria-label="Prénom"
+              className="border-b-2 border-gray-300 focus:outline-none focus:border-[var(--button-color)]"
+            />
+          </div>
+          <div className="flex flex-col">
+            <label htmlFor="email" className="mb-1 font-bold">
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Entrez votre email"
+              aria-label="Email"
+              className="border-b-2 border-gray-300 focus:outline-none focus:border-[var(--button-color)]"
+            />
+          </div>
+        </form>
       </div>
 
       {/* Section Recettes */}
-      <h2 id="recipes">Mes Recettes</h2>
-      <div className="personal-recipe-div">
+      <div className="flex items-center gap-2">
+        <FontAwesomeIcon
+          icon={faUtensils}
+          size="xl"
+          style={{ color: 'var(--button-color)' }}
+          aria-label="Icône cuisine"
+        />
+        <h2 className="text-shadow-lg">Mes Recettes</h2>
+      </div>
+      <div className="w-full max-w-7xl border-2 border-gray-300 rounded-lg px-8 py-4 my-4 shadow-2xl sm:max-w-5xl sm:py-8">
         <section className="my-recipe" aria-labelledby="recipes">
-          <ul>
+          <ul className="flex flex-col gap-6">
             {['Recette'].map((recipe, index) => (
               <li
                 key={index}
-                className="recipe-item"
+                className="flex flex-col sm:flex-row sm:justify-between sm:items-center border-b-2 border-gray-300 pb-2 gap-4 sm:gap-0"
                 aria-label={`Recette ${index + 1}`}
               >
-                {recipe}
-                <button
-                  type="button"
-                  className="btn btn-sm rounded-full text-white bg-[var(--button-color)] hover:bg-[#a31616] transition-colors"
-                  aria-label={`Éditer la recette ${index + 1}`}
-                  // onClick={() => }
-                >
-                  Éditer
-                </button>
-                <button
-                  type="button"
-                  className="btn btn-sm rounded-full text-white bg-[var(--button-color)] hover:bg-[#a31616] transition-colors"
-                  aria-label={`Supprimer la recette ${index + 1}`}
-                  // onClick={() => {}}
-                >
-                  Supprimer
-                </button>
+                <span className="font-bold text-xl">{recipe}</span>
+                <div className="flex gap-2">
+                  <button
+                    type="button"
+                    className="btn btn-m rounded-full text-white bg-[var(--button-color)] hover:bg-[#a31616] transition-colors"
+                    aria-label={`Éditer la recette ${index + 1}`}
+                  >
+                    Éditer
+                  </button>
+                  <button
+                    type="button"
+                    className="btn btn-m rounded-full text-white bg-[var(--button-color)] hover:bg-[#a31616] transition-colors"
+                    aria-label={`Supprimer la recette ${index + 1}`}
+                  >
+                    Supprimer
+                  </button>
+                </div>
               </li>
             ))}
           </ul>
         </section>
       </div>
 
-      <div className="button-add-dell-recipe">
+      <div className="my-16 flex flex-col sm:flex-row gap-4">
         <button
           type="button"
-          className="btn rounded-full text-white bg-[var(--button-color)] hover:bg-[#a31616] transition-colors"
+          className="btn rounded-full btn-lg text-white bg-[var(--button-color)] hover:bg-[#a31616] transition-colors"
           aria-label="Ajouter une nouvelle recette"
-          // onClick={() => }
         >
           Ajouter une recette
         </button>
         {/* Bouton Supprimer le Compte */}
         <button
           type="button"
-          className="btn rounded-full text-white bg-[var(--button-color)] hover:bg-[#a31616] transition-colors"
+          className="btn rounded-full btn-lg text-white bg-[var(--button-color)] hover:bg-[#a31616] transition-colors"
           aria-label="Supprimer mon compte"
-          // onClick={() => }
         >
           Supprimer mon compte
         </button>
