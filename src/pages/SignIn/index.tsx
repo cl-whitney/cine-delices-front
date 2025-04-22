@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import './style.css';
 
 export default function AccountCreationPage() {
   return (
@@ -72,7 +71,7 @@ export default function AccountCreationPage() {
         </div>
         <button
           type="button"
-          className="button btn-color  is-rounded"
+          className="btn rounded-full text-white bg-[var(--button-color)] hover:bg-[#a31616] transition-colors"
           // onClick={() => }
           aria-label="S’enregistrer"
         >

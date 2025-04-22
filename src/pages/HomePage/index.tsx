@@ -1,5 +1,3 @@
-import './style.css';
-
 import { useNavigate } from 'react-router-dom';
 import Card from '../../components/Card';
 import Carousel from '../../components/Carousel';
@@ -23,7 +21,7 @@ export default function HomePage() {
         {/* Bouton "Voir plus d'inspiration" */}
         <div className="more-inspiration">
           <button
-            className="btn btn-lg btn-circle"
+            className="btn btn-sm rounded-full text-white bg-[var(--button-color)] hover:bg-[#a31616] transition-colors"
             type="button"
             aria-label="Voir plus d'inspiration"
             onClick={() => navigate('/recettes')}

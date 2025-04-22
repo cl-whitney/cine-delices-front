@@ -1,7 +1,7 @@
 import {
   faFacebook,
-  faInstagram,
   faPinterest,
+  faSquareInstagram,
   faTiktok,
   faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
@@ -9,13 +9,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {} from 'react';
 import { Link } from 'react-router-dom';
 
-import './style.css';
-
 export default function Footer() {
   return (
     <div>
-      <footer>
-        <nav aria-label="Footer navigation">
+      <footer className="shadow-[0_-2px_5px_rgba(0,0,0,0.1)] fixed bottom-0 left-0 w-full z-10">
+        <nav
+          aria-label="Footer navigation"
+          className="bg-[var(--background-color)] p-4"
+        >
           <ul className="footer-links">
             <li className="footer-li">
               <Link to="/mentions-legales">Mentions légales</Link>
@@ -31,7 +32,7 @@ export default function Footer() {
             </li>
           </ul>
         </nav>
-        <div className="social-media">
+        <div className="bg-red-700 p-4 flex justify-evenly text-white text-2xl">
           <a
             href="https://www.facebook.com"
             aria-label="Facebook"
@@ -63,7 +64,7 @@ export default function Footer() {
             rel="noopener noreferrer"
           >
             <FontAwesomeIcon
-              icon={faInstagram}
+              icon={faSquareInstagram}
               className="icon"
               aria-label="logo instagram"
             />

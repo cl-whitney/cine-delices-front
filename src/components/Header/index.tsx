@@ -41,7 +41,7 @@ export default function Header() {
   };
 
   return (
-    <header className="p-4 bg-base-100 shadow-md">
+    <header className="fixed top-0 w-full bg-[var(--background-color)] shadow-md z-1000 p-4">
       <nav className="flex justify-between items-center">
         <div className="flex items-center space-x-2">
           <Link to="/" className="flex items-center text-lg font-semibold">
@@ -62,20 +62,23 @@ export default function Header() {
               className="flex items-center space-x-2"
             >
               <input
-                className="input input-bordered"
+                className="input input-bordered rounded-full focus:outline-none"
                 type="text"
                 placeholder="Rechercher..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
-              <button className="btn btn-primary" type="submit">
-                Chercher
+              <button
+                className="btn btn-primary bg-[var(--button-color)]  border-none rounded-full p-2 aspect-square  text-white"
+                type="submit"
+              >
+                <FontAwesomeIcon icon={faSearch} />
               </button>
             </form>
           ) : (
             <button
               type="button"
-              className="btn btn-circle btn-outline"
+              className="btn btn-circle btn-outline bg-[var(--button-color)] text-white"
               onClick={(event) => {
                 event.stopPropagation();
                 setShowSearch(true);
@@ -89,21 +92,24 @@ export default function Header() {
         {isMobile && showSearch && (
           <div
             ref={searchRef}
-            className="absolute top-16 left-0 w-full p-4 bg-base-200"
+            className="absolute top-16 left-0 w-full p-4 bg-base-200 shadow-lg rounded-lg"
           >
             <form
               onSubmit={handleSearch}
               className="flex items-center space-x-2"
             >
               <input
-                className="input input-bordered w-full"
+                className="input input-bordered w-full rounded-full focus:outline-none"
                 type="text"
                 placeholder="Rechercher..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
-              <button className="btn btn-primary" type="submit">
-                <FontAwesomeIcon icon={faSearch} />
+              <button
+                className="btn btn-primary bg-[var(--button-color)] border-none rounded-full p-2 aspect-square  text-white"
+                type="submit"
+              >
+                Valider
               </button>
             </form>
           </div>

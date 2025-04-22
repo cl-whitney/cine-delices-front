@@ -1,3 +1,5 @@
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -7,11 +9,11 @@ export default function HeaderLogIn() {
   const menuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    setIsMobile(window.innerWidth < 1024);
+    const updateIsMobile = () => setIsMobile(window.innerWidth < 1024);
+    updateIsMobile();
 
-    const handleResize = () => setIsMobile(window.innerWidth < 1024);
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener('resize', updateIsMobile);
+    return () => window.removeEventListener('resize', updateIsMobile);
   }, []);
 
   useEffect(() => {
@@ -25,25 +27,27 @@ export default function HeaderLogIn() {
       }
     };
 
-    document.addEventListener('click', handleClickOutside);
-    return () => document.removeEventListener('click', handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [isActive]);
 
-  const toggleMenu = () => setIsActive(!isActive);
+  const toggleMenu = () => setIsActive((prev) => !prev);
 
   return (
-    <div className="flex justify-end">
+    <div className="flex justify-end relative">
       {/* Bouton burger visible en mobile */}
       {isMobile && (
         <button
           type="button"
-          className={`btn btn-square btn-outline ${isActive ? 'bg-base-300' : ''}`}
+          className={`btn btn-square btn-ghost ${isActive ? 'btn-active' : ''}`}
           aria-label="menu"
           onClick={toggleMenu}
         >
-          <span className="block w-6 h-0.5 bg-gray-700 mb-1" />
-          <span className="block w-6 h-0.5 bg-gray-700 mb-1" />
-          <span className="block w-6 h-0.5 bg-gray-700" />
+          <FontAwesomeIcon
+            icon={faBars}
+            size="2xl"
+            color={'var(--button-color'}
+          />
         </button>
       )}
 
@@ -51,12 +55,18 @@ export default function HeaderLogIn() {
       {isMobile && isActive && (
         <div
           ref={menuRef}
-          className="absolute right-4 mt-2 bg-base-100 shadow-lg rounded-lg p-4"
+          className="absolute mt-10 bg-base-100 shadow-lg rounded-lg p-4 z-10 border border-gray-300 font-bold"
         >
-          <Link to="/inscription" className="block px-4 py-2 hover:bg-base-200">
+          <Link
+            to="/inscription"
+            className="block px-4 py-2 text-l whitespace-nowrap border-b border-gray-300"
+          >
             Inscription
           </Link>
-          <Link to="/connexion" className="block px-4 py-2 hover:bg-base-200">
+          <Link
+            to="/connexion"
+            className="block px-4 py-2 text-l whitespace-nowrap"
+          >
             Se Connecter
           </Link>
         </div>
@@ -64,11 +74,17 @@ export default function HeaderLogIn() {
 
       {/* Boutons visibles en desktop */}
       {!isMobile && (
-        <div className="flex space-x-4">
-          <Link to="/inscription" className="btn btn-primary">
+        <div className="flex space-x-2">
+          <Link
+            to="/inscription"
+            className="btn rounded-lg bg-[var(--button-color)] hover:bg-[#a31616] transition-colors text-white"
+          >
             Inscription
           </Link>
-          <Link to="/connexion" className="btn btn-outline log-in">
+          <Link
+            to="/connexion"
+            className="btn rounded-lg bg-white hover:bg-gray-100 transition-colors"
+          >
             Se Connecter
           </Link>
         </div>

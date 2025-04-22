@@ -1,5 +1,3 @@
-import './style.css';
-
 export default function LegalNotices() {
   return (
     <div
@@ -9,7 +7,7 @@ export default function LegalNotices() {
       <h1 className="legal-title">Mentions Légales</h1>
       {/* Sommaire */}
       <nav aria-labelledby="sommaire">
-        <h2 id="sommaire" className="legal-heading">
+        <h2 id="sommaire" className="legal-heading scroll-mt-20">
           Sommaire
         </h2>
         <ul>
@@ -54,10 +52,13 @@ export default function LegalNotices() {
 
       {/* Contenu des mentions légales */}
       <section id="editeur" className="legal-section">
-        <h2 className="legal-heading">1. Éditeur du site</h2>
+        <h2 className="legal-heading scroll-mt-20">1. Éditeur du site</h2>
         <p>
-          <strong>CinéDélices SAS</strong>
-          <p>42 rue du Cinéma, 75000 Paris, France</p>
+          <strong className="font-bold text-lg md:text-base md:font-bold">
+            CinéDélices SAS
+          </strong>
+          <p>42 rue du Cinéma</p>
+          <p>75000 Paris, France</p>
           <p>
             <a href="mailto:contact@CinéDélies.fr">
               Email : contact@cinedelices.fr
@@ -68,23 +69,28 @@ export default function LegalNotices() {
               href="tel:+3378253695"
               aria-label="Appeler CinéDélices au 00 78 25 36 95"
             >
-              éléphone : 00 78 25 36 95
+              Téléphone : 00 78 25 36 95
             </a>
           </p>
         </p>
       </section>
 
       <section id="hebergeur" className="legal-section">
-        <h2 className="legal-heading">2. Hébergeur</h2>
+        <h2 className="legal-heading scroll-mt-20">2. Hébergeur</h2>
         <p>
-          <strong>OVHASH</strong>
-          <p>10 Rue des serveurs prend feu, 87000 TresLoin, France</p>
+          <strong className="font-bold text-lg md:text-base md:font-bold">
+            OVHASH
+          </strong>
+          <p>10 Rue des serveurs prennent feu</p>
+          <p>87000 TresLoin, France</p>
           <p>Téléphone : 00 10 08 19 88</p>
         </p>
       </section>
 
       <section id="propriete" className="legal-section">
-        <h2 className="legal-heading">3. Propriété intellectuelle</h2>
+        <h2 className="legal-heading scroll-mt-20">
+          3. Propriété intellectuelle
+        </h2>
         <p>
           Tous les contenus présents sur le site CinéDélices (textes, images,
           recettes, vidéos, logos...) sont la propriété exclusive de CinéDélices
@@ -94,7 +100,7 @@ export default function LegalNotices() {
       </section>
 
       <section id="donnees" className="legal-section">
-        <h2 className="legal-heading">4. Données personnelles</h2>
+        <h2 className="legal-heading scroll-mt-20">4. Données personnelles</h2>
         <p>
           Aucune donnée personnelle n'est traitée de manière automatique.
           Toutefois, des données telles que le nom, prénom, et email peuvent
@@ -103,7 +109,7 @@ export default function LegalNotices() {
       </section>
 
       <section id="cookies" className="legal-section">
-        <h2 className="legal-heading">5. Cookies</h2>
+        <h2 className="legal-heading scroll-mt-20">5. Cookies</h2>
         <p>
           Ce site utilise des cookies pour améliorer l'expérience utilisateur.
           Vous pouvez gérer vos préférences de cookies en ajustant les
@@ -112,7 +118,7 @@ export default function LegalNotices() {
       </section>
 
       <section id="droit" className="legal-section">
-        <h2 className="legal-heading">6. Droit applicable</h2>
+        <h2 className="legal-heading scroll-mt-20">6. Droit applicable</h2>
         <p>
           Les présentes mentions légales sont régies par le droit français. En
           cas de litige, seuls les tribunaux français sont compétents.

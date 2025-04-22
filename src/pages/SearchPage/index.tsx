@@ -1,5 +1,3 @@
-import './style.css';
-
 import { type Dispatch, type SetStateAction, useState } from 'react';
 
 export default function SearchPage() {

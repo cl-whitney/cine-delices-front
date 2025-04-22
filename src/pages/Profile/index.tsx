@@ -1,4 +1,3 @@
-import './style.css';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -65,7 +64,7 @@ export default function UserPage() {
                 {recipe}
                 <button
                   type="button"
-                  className="button btn-color  is-rounded btn-small"
+                  className="btn btn-sm rounded-full text-white bg-[var(--button-color)] hover:bg-[#a31616] transition-colors"
                   aria-label={`Éditer la recette ${index + 1}`}
                   // onClick={() => }
                 >
@@ -73,9 +72,9 @@ export default function UserPage() {
                 </button>
                 <button
                   type="button"
-                  className="button btn-color  is-rounded btn-small"
+                  className="btn btn-sm rounded-full text-white bg-[var(--button-color)] hover:bg-[#a31616] transition-colors"
                   aria-label={`Supprimer la recette ${index + 1}`}
-                  // onClick={() => }
+                  // onClick={() => {}}
                 >
                   Supprimer
                 </button>
@@ -88,7 +87,7 @@ export default function UserPage() {
       <div className="button-add-dell-recipe">
         <button
           type="button"
-          className="button btn-color  is-rounded "
+          className="btn rounded-full text-white bg-[var(--button-color)] hover:bg-[#a31616] transition-colors"
           aria-label="Ajouter une nouvelle recette"
           // onClick={() => }
         >
@@ -97,7 +96,7 @@ export default function UserPage() {
         {/* Bouton Supprimer le Compte */}
         <button
           type="button"
-          className="button btn-color  is-rounded"
+          className="btn rounded-full text-white bg-[var(--button-color)] hover:bg-[#a31616] transition-colors"
           aria-label="Supprimer mon compte"
           // onClick={() => }
         >

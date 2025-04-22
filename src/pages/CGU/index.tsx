@@ -1,5 +1,3 @@
-import './style.css';
-
 export default function Cgu() {
   return (
     <div
@@ -7,7 +5,7 @@ export default function Cgu() {
       className="terms-container"
     >
       <div className="terms-content">
-        <h1 className="terms-title">Conditions Générales d’Utilisation</h1>
+        <h1 className="terms-title">Conditions Générales</h1>
 
         <nav className="terms-index">
           <h2 className="terms-index-title">Sommaire</h2>
@@ -43,7 +41,7 @@ export default function Cgu() {
         </nav>
 
         <section className="terms-section">
-          <h2 id="presentation" className="terms-heading">
+          <h2 id="presentation" className="terms-heading scroll-mt-20">
             1. Présentation du site
           </h2>
           <p className="terms-paragraph">
@@ -55,7 +53,7 @@ export default function Cgu() {
         </section>
 
         <section className="terms-section">
-          <h2 id="acceptation" className="terms-heading">
+          <h2 id="acceptation" className="terms-heading scroll-mt-20">
             2. Acceptation des cgu
           </h2>
           <p className="terms-paragraph">
@@ -67,7 +65,7 @@ export default function Cgu() {
         </section>
 
         <section className="terms-section">
-          <h2 id="acces" className="terms-heading">
+          <h2 id="acces" className="terms-heading scroll-mt-20">
             3. Accès au site
           </h2>
           <p className="terms-paragraph">
@@ -79,7 +77,7 @@ export default function Cgu() {
         </section>
 
         <section className="terms-section">
-          <h2 id="propriete" className="terms-heading">
+          <h2 id="propriete" className="terms-heading scroll-mt-20">
             4. Propriété intellectuelle
           </h2>
           <p className="terms-paragraph">
@@ -97,7 +95,7 @@ export default function Cgu() {
         </section>
 
         <section className="terms-section">
-          <h2 id="contributions" className="terms-heading">
+          <h2 id="contributions" className="terms-heading scroll-mt-20">
             5. Contributions des utilisateurs
           </h2>
           <p className="terms-paragraph">
@@ -109,19 +107,19 @@ export default function Cgu() {
           </p>
           <p className="terms-paragraph">Sont interdits :</p>
           <ul className="terms-list">
-            <li>- les propos diffamatoires, injurieux ou discriminatoires,</li>
+            <li>* les propos diffamatoires, injurieux ou discriminatoires,</li>
             <li>
-              - les contenus à caractère pornographique, violent ou illégal,
+              * les contenus à caractère pornographique, violent ou illégal,
             </li>
             <li>
-              - la publication de liens ou de contenus à des fins commerciales
+              * la publication de liens ou de contenus à des fins commerciales
               non autorisées.
             </li>
           </ul>
         </section>
 
         <section className="terms-section">
-          <h2 id="responsabilites" className="terms-heading">
+          <h2 id="responsabilites" className="terms-heading scroll-mt-20">
             6. Responsabilités
           </h2>
           <p className="terms-paragraph">
@@ -134,14 +132,14 @@ export default function Cgu() {
             CinéDélices décline toute responsabilité en cas :
           </p>
           <ul className="terms-list">
-            <li>- d’erreurs dans les recettes ou leur exécution,</li>
-            <li>- d’allergies ou intolérances alimentaires non mentionnées,</li>
-            <li>- de dysfonctionnements techniques affectant le site.</li>
+            <li>* d’erreurs dans les recettes ou leur exécution,</li>
+            <li>* d’allergies ou intolérances alimentaires non mentionnées,</li>
+            <li>* de dysfonctionnements techniques affectant le site.</li>
           </ul>
         </section>
 
         <section className="terms-section">
-          <h2 id="donnees" className="terms-heading">
+          <h2 id="donnees" className="terms-heading scroll-mt-20">
             7. Données personnelles
           </h2>
           <p className="terms-paragraph">
@@ -159,7 +157,7 @@ export default function Cgu() {
         </section>
 
         <section className="terms-section">
-          <h2 id="modifications" className="terms-heading">
+          <h2 id="modifications" className="terms-heading scroll-mt-20">
             8. Modifications des cgu
           </h2>
           <p className="terms-paragraph">
@@ -171,7 +169,7 @@ export default function Cgu() {
         </section>
 
         <section className="terms-section">
-          <h2 id="droit" className="terms-heading">
+          <h2 id="droit" className="terms-heading scroll-mt-20">
             9. Droit applicable
           </h2>
           <p className="terms-paragraph">

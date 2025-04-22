@@ -1,39 +1,39 @@
 export default function Carousel() {
   return (
-    // TODO: Faire un vrai carrousel
     <section aria-labelledby="featured-section" className="carousel">
-      <h1 id="featured-section" className="section-title">
-        À la une
-      </h1>
       <div className="carousel-inner">
-        <article className="featured-article">
-          <figure>
-            <img
-              src="/images/retour-vers-le-futur.jpg"
-              alt="Plat Retour vers le futur"
-              loading="lazy"
-            />
-            <figcaption>Recette inspirée d’un univers futuriste</figcaption>
-          </figure>
-          <h2>Retour vers le futur</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-            euismod, nisl eget consectetur fermentum, nunc urna egestas purus,
-            in varius ligula tellus a nunc. <br />
-            <br />
-            Les ingrédients utilisés dans cette recette proviennent directement
-            d’un marché temporel du futur. À tester !
-            <br />
-            <br />
-            <button
-              type="button"
-              // onClick={() => navigate('/recette/') }
-              className="btn btn-lg btn-circle btn-warning"
-              aria-label="Voir la recette à la une"
-            >
-              Voir plus
-            </button>
-          </p>
+        <article className="featured-article flex flex-col md:flex-row items-start gap-4">
+          <div className="flex-1">
+            <h1 className="text-lg font-semibold mb-2">À la une </h1>
+            <figure className="mb-4">
+              <img
+                src="./src/assets/recipe.jpg"
+                alt="Plat Retour vers le futur"
+                loading="lazy"
+                className="rounded-lg"
+              />
+            </figure>
+          </div>
+          <div className="flex-1 pt-0 md:pt-21">
+            <h2 className="text-2xl font-bold mb-4">Retour vers le futur</h2>
+            <p className="mb-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+              euismod, nisl eget consectetur fermentum, nunc urna egestas purus,
+              in varius ligula tellus a nunc. <br />
+              <br />
+              Les ingrédients utilisés dans cette recette proviennent
+              directement d’un marché temporel du futur. À tester !
+            </p>
+            <div className="text-right">
+              <button
+                type="button"
+                className="btn btn-sm rounded-full text-white bg-[var(--button-color)] hover:bg-[#a31616] transition-colors"
+                aria-label="Voir la recette à la une"
+              >
+                Voir plus
+              </button>
+            </div>
+          </div>
         </article>
       </div>
     </section>

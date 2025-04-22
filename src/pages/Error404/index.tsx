@@ -1,5 +1,3 @@
-import './style.css';
-
 export default function NotFound() {
   return (
     <div aria-labelledby="error-heading" className="error-container">

@@ -1,5 +1,3 @@
-import './style.css';
-
 import { useNavigate } from 'react-router-dom';
 
 export default function LoginPage() {
@@ -27,7 +25,7 @@ export default function LoginPage() {
         />
         <button
           type="button"
-          className="button btn-color  is-rounded"
+          className="btn rounded-full text-white bg-[var(--button-color)] hover:bg-[#a31616] transition-colors"
           // onClick={() => }
           aria-label="Mot de passe oublié"
         >
@@ -35,7 +33,7 @@ export default function LoginPage() {
         </button>
         <button
           type="button"
-          className="button btn-color  is-rounded"
+          className="btn rounded-full text-white bg-[var(--button-color)] hover:bg-[#a31616] transition-colors"
           // onClick={() => }
           aria-label="Se connecter"
         >
@@ -45,7 +43,7 @@ export default function LoginPage() {
       <p className="or-text">Ou</p>
       <button
         type="button"
-        className="button btn-color  is-rounded"
+        className="btn rounded-full text-white bg-[var(--button-color)] hover:bg-[#a31616] transition-colors"
         onClick={() => navigate('/inscription')}
         aria-label="Créer un compte"
       >
