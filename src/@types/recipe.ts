@@ -22,3 +22,7 @@ export interface IRecipe {
   created_at: string;
   updated_at?: string;
 }
+
+export interface IRecipeProps {
+  recipe: IRecipe;
+}
