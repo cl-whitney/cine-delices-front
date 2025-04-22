@@ -1,10 +1,23 @@
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import type { IRecipe } from '../../@types/recipe';
 import Card from '../../components/Card';
 import Carousel from '../../components/Carousel';
 
 export default function HomePage() {
   const navigate = useNavigate();
+  const [recipes, setRecipes] = useState<IRecipe[]>([]);
 
+  useEffect(() => {
+    const fetchAndSaveDataInState = async () => {
+      try {
+        const response = await axios.get('http://localhost:3000');
+        setRecipes(response.data.recipes);
+      } catch (_e) {}
+    };
+    fetchAndSaveDataInState();
+  }, []);
   return (
     <>
       {/* Section "À la une" sous forme de carrousel */}
@@ -16,7 +29,9 @@ export default function HomePage() {
           Inspirations
         </h2>
         <div className="card-grid">
-          <Card />
+          {recipes.map((recipe) => (
+            <Card key={recipe.id} recipe={recipe} />
+          ))}
         </div>
         {/* Bouton "Voir plus d'inspiration" */}
         <div className="more-inspiration">
