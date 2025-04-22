@@ -1,6 +1,26 @@
-import { type Dispatch, type SetStateAction, useState } from 'react';
+import axios from 'axios';
+import { type Dispatch, type SetStateAction, useEffect, useState } from 'react';
+// Import type pour esquiver l'erreur de biome sur l'import (import de typage et non dans le code exécutable)
+import type { IRecipe } from '../../@types/recipe';
+import Card from '../../components/Card';
 
 export default function SearchPage() {
+  const [recipes, setRecipes] = useState<IRecipe[]>([]);
+
+  useEffect(() => {
+    const fetchAndSaveDataInState = async () => {
+      try {
+        // Fetch avec axios si =! 200 alors on passe dans le catch
+        const response = await axios.get('http://localhost:3000/api/recettes/');
+
+        // On enregistre les datas dans le state
+        // On récupère les recettes dans response.data.recipes
+        setRecipes(response.data.recipes);
+      } catch (_e) {}
+    };
+    fetchAndSaveDataInState();
+  }, []);
+
   const [isActive1, setIsActive1] = useState<boolean>(false);
   const [isActive2, setIsActive2] = useState<boolean>(false);
   const [isActive3, setIsActive3] = useState<boolean>(false);
@@ -94,6 +114,11 @@ export default function SearchPage() {
             checkboxId="checkbox3"
           />
         </div>
+      </div>
+      <div>
+        {recipes.map((recipe) => (
+          <Card key={recipe.id} recipe={recipe} />
+        ))}
       </div>
     </>
   );

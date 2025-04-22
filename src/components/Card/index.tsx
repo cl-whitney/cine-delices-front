@@ -1,8 +1,4 @@
-import type { IRecipe } from '../../@types/recipe';
-
-interface IRecipeProps {
-  recipe: IRecipe;
-}
+import type { IRecipeProps } from '../../@types/recipe';
 
 export default function Card({ recipe }: IRecipeProps) {
   return (
