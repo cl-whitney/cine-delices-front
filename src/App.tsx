@@ -12,9 +12,9 @@ import HomePage from './pages/HomePage';
 import LegalNotices from './pages/LegalNotices';
 import LogIn from './pages/LogIn';
 import Profile from './pages/Profile';
+import Recipe from './pages/Recipe';
 import SearchPage from './pages/SearchPage';
 import SignIn from './pages/SignIn';
-import Recipe from './pages/Recipe';
 
 export default function App() {
   return (
@@ -26,7 +26,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/recettes" element={<SearchPage />} />
-            <Route path="/recettes/recette" element={<Recipe />} />
+            <Route path="/recettes/:id" element={<Recipe />} />
             <Route path="/connexion" element={<LogIn />} />
             <Route path="/inscription" element={<SignIn />} />
             <Route path="/profil" element={<Profile />} />
