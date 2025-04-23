@@ -41,7 +41,7 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 w-full bg-[var(--background-color)] shadow-2xl z-1000 p-4">
+    <header className="fixed top-0 w-full bg-[var(--background-color)] shadow-2xl z-1000 p-2 rounded-b-lg">
       <nav className="flex justify-between items-center">
         <div className="flex items-center space-x-2">
           <Link to="/" className="flex items-center text-lg font-semibold">

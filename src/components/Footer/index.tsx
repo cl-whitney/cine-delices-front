@@ -12,10 +12,10 @@ import { Link } from 'react-router-dom';
 export default function Footer() {
   return (
     <div>
-      <footer className="shadow-[0_-25px_15px_rgba(0,0,0,0.1)] fixed bottom-0 left-0 w-full z-10">
+      <footer className="h-screen">
         <nav
           aria-label="Footer navigation"
-          className="bg-[var(--background-color)] p-4"
+          className="bg-[var(--background-color)] p-2 rounded-t-lg"
         >
           <ul className="footer-links">
             <li className="footer-li">
@@ -32,7 +32,7 @@ export default function Footer() {
             </li>
           </ul>
         </nav>
-        <div className="bg-red-700 p-4 flex justify-evenly text-white text-2xl">
+        <div className="bg-red-700 p-2 flex justify-evenly text-white text-xl">
           <a
             href="https://www.facebook.com"
             aria-label="Facebook"

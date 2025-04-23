@@ -16,7 +16,7 @@ export default function AccountCreationPage() {
               name="lastName"
               placeholder="Entrer votre nom"
               aria-label="Entrer votre nom"
-              className="border-b-2 border-gray-300 focus:outline-none focus:border-[var(--button-color)]"
+              className="border-b-2 border-gray-300 focus:outline-none focus:border-[var(--button-color)] p-1"
             />
           </div>
           <div className="flex flex-col">
@@ -29,7 +29,7 @@ export default function AccountCreationPage() {
               name="firstName"
               placeholder="Entrer votre prénom"
               aria-label="Entrer votre prénom"
-              className="border-b-2 border-gray-300 focus:outline-none focus:border-[var(--button-color)]"
+              className="border-b-2 border-gray-300 focus:outline-none focus:border-[var(--button-color)] p-1"
             />
           </div>
           <div className="flex flex-col">
@@ -42,7 +42,7 @@ export default function AccountCreationPage() {
               name="email"
               placeholder="Entrer votre email"
               aria-label="Entrer votre email"
-              className="border-b-2 border-gray-300 focus:outline-none focus:border-[var(--button-color)]"
+              className="border-b-2 border-gray-300 focus:outline-none focus:border-[var(--button-color)] p-1"
             />
           </div>
           <div className="flex flex-col">
@@ -55,11 +55,11 @@ export default function AccountCreationPage() {
               name="password"
               placeholder="Entrer votre mot de passe"
               aria-label="Entrer votre mot de passe"
-              className="border-b-2 border-gray-300 focus:outline-none focus:border-[var(--button-color)]"
+              className="border-b-2 border-gray-300 focus:outline-none focus:border-[var(--button-color)] p-1"
             />
           </div>
           <div className="flex items-start gap-2">
-            <input type="checkbox" id="terms" name="terms" className="mt-1" />
+            <input type="checkbox" defaultChecked className="checkbox" />
             <label htmlFor="terms" className="text-sm">
               J’ai lu, j’accepte les{' '}
               <Link

@@ -1,20 +1,76 @@
 export default function Carousel() {
   return (
-    <section aria-labelledby="featured-section" className="carousel">
+    <section aria-labelledby="carousel-section" className="carousel">
       <div className="carousel-inner">
         <article className="featured-article flex flex-col md:flex-row items-start gap-4">
           <div className="flex-1">
-            <h1 className="text-lg font-semibold mb-2 text-[var(--button-color)] text-shadow-lg">
+            <h1 className="mb-2 text-[var(--button-color)] text-shadow-lg">
               À la une{' '}
             </h1>
-            <figure className="mb-4">
-              <img
-                src="./src/assets/recipe.jpg"
-                alt="Plat Retour vers le futur"
-                loading="lazy"
-                className="rounded-lg"
+            <div className="carousel w-full">
+              <div id="item1" className="carousel-item w-full">
+                <img
+                  src="./src/assets/recipe.jpg"
+                  className="w-full shadow-xl rounded-lg "
+                  loading="lazy"
+                  alt="Plat Retour vers le futur"
+                  aria-labelledby="Carousel section"
+                />
+              </div>
+              <div id="item2" className="carousel-item w-full">
+                <img
+                  src="./src/assets/recipe.jpg"
+                  className="w-full shadow-xl rounded-lg"
+                  loading="lazy"
+                  alt="Plat Retour vers le futur"
+                  aria-labelledby="Carousel section"
+                />
+              </div>
+              <div id="item3" className="carousel-item w-full">
+                <img
+                  src="./src/assets/recipe.jpg"
+                  className="w-full shadow-xl rounded-lg"
+                  loading="lazy"
+                  alt="Plat Retour vers le futur"
+                  aria-labelledby="Carousel section"
+                />
+              </div>
+              <div id="item4" className="carousel-item w-full">
+                <img
+                  src="./src/assets/recipe.jpg"
+                  className="w-full shadow-xl rounded-lg"
+                  loading="lazy"
+                  alt="Plat Retour vers le futur"
+                  aria-labelledby="Carousel section"
+                />
+              </div>
+            </div>
+            <div className="flex w-full justify-center gap-2 py-2 ">
+              {/* biome-ignore lint/a11y/useAnchorContent: <explanation> */}
+              <a
+                href="#item1"
+                className="btn btn-xs bg-[var(--button-color)] hover:bg-[#a31616] transition-colors shadow-xl"
+                aria-label="Allez a l'image suivante"
               />
-            </figure>
+              {/* biome-ignore lint/a11y/useAnchorContent: <explanation> */}
+              <a
+                href="#item2"
+                className="btn btn-xs bg-[var(--button-color)] hover:bg-[#a31616] transition-colors shadow-xl"
+                ria-label="Allez a l'image suivante"
+              />
+              {/* biome-ignore lint/a11y/useAnchorContent: <explanation> */}
+              <a
+                href="#item3"
+                className="btn btn-xs bg-[var(--button-color)] hover:bg-[#a31616] transition-colors shadow-xl"
+                ria-label="Allez a l'image suivante"
+              />
+              {/* biome-ignore lint/a11y/useAnchorContent: <explanation> */}
+              <a
+                href="#item4"
+                className="btn btn-xs bg-[var(--button-color)] hover:bg-[#a31616] transition-colors shadow-xl"
+                ria-label="Allez a l'image suivante"
+              />
+            </div>
           </div>
           <div className="flex-1 pt-0 md:pt-21">
             <h2 className="text-2xl font-bold mb-4 text-[var(--button-color)] text-shadow-lg">
@@ -31,7 +87,7 @@ export default function Carousel() {
             <div className="text-right">
               <button
                 type="button"
-                className="btn rounded-full text-white bg-[var(--button-color)] hover:bg-[#a31616] transition-colors"
+                className="btn rounded-full text-white bg-[var(--button-color)] hover:bg-[#a31616] transition-colors md:m-10 "
                 aria-label="Voir la recette à la une"
               >
                 Voir plus
@@ -39,23 +95,6 @@ export default function Carousel() {
             </div>
           </div>
         </article>
-        <div className="flex justify-center p-4 space-x-4 my-4">
-          <button
-            className="join-item btn bg-gray-200 shadow-xl"
-            type="button"
-            aria-label="Slide 1"
-          />
-          <button
-            className="join-item btn bg-gray-200 shadow-xl"
-            type="button"
-            aria-label="Slide 2"
-          />
-          <button
-            className="join-item btn bg-gray-200 shadow-xl"
-            type="button"
-            aria-label="Slide 3"
-          />
-        </div>
       </div>
     </section>
   );

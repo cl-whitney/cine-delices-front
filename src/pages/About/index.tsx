@@ -2,7 +2,7 @@ export default function About() {
   return (
     <div
       aria-label="Section À propos de CinéDélices"
-      className="about-containe"
+      className="my-20 bg-gray-200 p-6 rounded-lg shadow-xl"
     >
       <section id="about" className="about-section">
         <header>

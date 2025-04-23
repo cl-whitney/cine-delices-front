@@ -2,7 +2,7 @@ export default function LegalNotices() {
   return (
     <div
       aria-label="Mentions légales de CinéDélices"
-      className="legal-container"
+      className="my-20 bg-gray-200 p-6 rounded-lg shadow-xl"
     >
       <h1 className="legal-title">Mentions Légales</h1>
       {/* Sommaire */}

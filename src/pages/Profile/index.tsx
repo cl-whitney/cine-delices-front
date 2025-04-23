@@ -14,9 +14,8 @@ export default function UserPage() {
         />
         <h2 className="text-shadow-lg">Informations personnelles</h2>
       </div>
-
       {/* Section Informations Personnelles */}
-      <div className="w-full max-w-4xl border-2 border-gray-300 rounded-lg px-8 py-4 my-4 shadow-2xl sm:max-w-5xl sm:py-8">
+      <div className="w-full max-w-4xl border-2 border-gray-300 rounded-lg px-8 py-4 my-4 shadow-xl sm:max-w-5xl sm:py-8">
         <form className="flex flex-col gap-6">
           <div className="flex flex-col">
             <label htmlFor="username" className="mb-1 font-bold">
@@ -28,7 +27,7 @@ export default function UserPage() {
               name="username"
               placeholder="Entrez votre nom ou pseudo"
               aria-label="Nom ou Pseudo"
-              className="border-b-2 border-gray-300 focus:outline-none focus:border-[var(--button-color)]"
+              className="border-b-2 border-gray-300 focus:outline-none focus:border-[var(--button-color)] p-1"
             />
           </div>
           <div className="flex flex-col">
@@ -41,7 +40,7 @@ export default function UserPage() {
               name="firstname"
               placeholder="Entrez votre prénom"
               aria-label="Prénom"
-              className="border-b-2 border-gray-300 focus:outline-none focus:border-[var(--button-color)]"
+              className="border-b-2 border-gray-300 focus:outline-none focus:border-[var(--button-color)] p-1"
             />
           </div>
           <div className="flex flex-col">
@@ -54,14 +53,13 @@ export default function UserPage() {
               name="email"
               placeholder="Entrez votre email"
               aria-label="Email"
-              className="border-b-2 border-gray-300 focus:outline-none focus:border-[var(--button-color)]"
+              className="border-b-2 border-gray-300 focus:outline-none focus:border-[var(--button-color)] p-1"
             />
           </div>
         </form>
       </div>
-
       {/* Section Recettes */}
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 ">
         <FontAwesomeIcon
           icon={faUtensils}
           size="xl"
@@ -70,7 +68,7 @@ export default function UserPage() {
         />
         <h2 className="text-shadow-lg">Mes Recettes</h2>
       </div>
-      <div className="w-full max-w-7xl border-2 border-gray-300 rounded-lg px-8 py-4 my-4 shadow-2xl sm:max-w-5xl sm:py-8">
+      <div className="w-full max-w-7xl border-2 border-gray-300 rounded-lg px-8 py-4 my-4 sm:max-w-5xl sm:py-8 shadow-xl">
         <section className="my-recipe" aria-labelledby="recipes">
           <ul className="flex flex-col gap-6">
             {['Recette'].map((recipe, index) => (
@@ -101,7 +99,6 @@ export default function UserPage() {
           </ul>
         </section>
       </div>
-
       <div className="my-16 flex flex-col sm:flex-row gap-4">
         <button
           type="button"

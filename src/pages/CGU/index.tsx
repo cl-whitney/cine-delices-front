@@ -2,7 +2,7 @@ export default function Cgu() {
   return (
     <div
       aria-label="Conditions Générales d’Utilisation de CinéDélices"
-      className="terms-container"
+      className="my-20 bg-gray-200 p-6 rounded-lg shadow-xl"
     >
       <div className="terms-content">
         <h1 className="terms-title">Conditions Générales</h1>

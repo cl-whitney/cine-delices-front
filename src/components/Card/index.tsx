@@ -1,20 +1,24 @@
 export default function Card() {
   return (
-    <>
-      <article className="card flex flex-col items-center rounded-lg p-4">
+    <div
+      className="card flex bg-white flex-col items-center rounded-lg  border-1 shadow-xl p-1 hover:cursor-pointer md:w-96"
+      onClick={() => (window.location.href = '/recette')}
+    >
+      <figure>
         <img
           src="./src/assets/recipe.jpg"
           alt="Salade périfée de Frodon"
           loading="lazy"
-          className="w-64 h-52 object-cover rounded-lg mb-4 shadow-lg"
+          className="rounded-lg "
         />
-        <h3 className="text-center">La salade périfée de Frodon</h3>
-        {/* Ajouter un lien vers la page recette correspondante */}
-        {/* <Link
-          href="#"
-          aria-label="Voir la recette : La salade périfée de Frodon"
-        /> */}
-      </article>
-    </>
+      </figure>
+      <div className="card-body">
+        <h3 className="card-title">La salade périfée de Frodon</h3>
+        <p>
+          A card component has a figure, a body part, and inside body there are
+          title and actions parts
+        </p>
+      </div>
+    </div>
   );
 }

@@ -2,23 +2,15 @@ export default function NotFound() {
   return (
     <div
       aria-labelledby="error-heading"
-      className="items-center min-h-screen"
-      style={{
-        backgroundImage: 'url(./src/assets/background/bg4.jpg)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        height: '100vh',
-        margin: '-1rem -2rem',
-      }}
+      className="bg-[url(./src/assets/background/bg4.jpg)] bg-cover bg-top min-h-screen flex flex-col -mt-[1.4rem] -mx-[1.5rem] -mb-[8rem]"
     >
-      <section className="text-center text-white mt-8">
+      <section className="text-center text-white mt-20">
         <h1
           id="error-heading"
           className="font-bold text-white text-4xl"
           style={{ textShadow: '2px 2px 4px black' }}
         >
-          Page non trouvée
+          ERREUR 404
         </h1>
         <div className="error-content">
           <p

@@ -3,31 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --primary-color: #4a90e2;
-  --secondary-color: #50e3c2;
   --background-color: #eee3d3;
   --background-footer-color: #b71818;
   --button-color: #b71818;
-  --text-color: #333;
 }
 
 html {
   font-family: "Quicksand", sans-serif;
-}
-
-.quicksand {
-  font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-}
-
-.main-container {
-  margin: 0rem 0.5rem 0rem 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 2rem 1rem;
 }
 
 @media (max-width: 767px) {
@@ -50,13 +35,15 @@ html {
   }
 
   footer ul {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0.2rem;
+    list-style: none;
+    text-align: center;
   }
 
   li {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     font-weight: 600;
   }
 }
@@ -64,7 +51,7 @@ html {
 /* MAIN */
 
 .main-container {
-  margin: 20% 1.5rem 50% 1.5rem;
+  margin: 2rem 1rem 0rem 1rem;
 }
 
 @media (min-width: 768px) {
@@ -100,6 +87,6 @@ html {
   /* MAIN */
 
   .main-container {
-    margin: 6% 1.5rem 10% 1.5rem;
+    margin: 3rem 1rem 1.5rem 1rem;
   }
 }
