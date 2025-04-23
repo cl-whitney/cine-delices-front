@@ -15,6 +15,8 @@ export interface IRecipe {
   title: string;
   image?: string;
   description?: string;
+  instruction: string;
+  duration: string;
   difficulty: Difficulty;
   cost: Cost;
   user_id?: number; // ? 'user_id?' si supprimé
@@ -23,6 +25,8 @@ export interface IRecipe {
   updated_at?: string;
 }
 
-export interface IRecipeProps {
-  recipe: IRecipe;
+export interface IRecipeStore {
+  recipe: IRecipe[];
+  // permet de déclencher une fonction asynchrone (ex: requête http pour récupérer des datas api)
+  fetchRecipe: () => Promise<void>;
 }
