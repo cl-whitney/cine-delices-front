@@ -11,12 +11,15 @@ export default function SearchPage() {
     const fetchAndSaveDataInState = async () => {
       try {
         // Fetch avec axios si =! 200 alors on passe dans le catch
-        const response = await axios.get('http://localhost:3000/api/recettes/');
+        const response = await axios.get('http://localhost:3000/api/recettes');
 
         // On enregistre les datas dans le state
         // On récupère les recettes dans response.data.recipes
         setRecipes(response.data.recipes);
-      } catch (_e) {}
+        console.log(response.data);
+      } catch (_e) {
+        console.log(_e);
+      }
     };
     fetchAndSaveDataInState();
   }, []);
@@ -117,7 +120,7 @@ export default function SearchPage() {
       </div>
       <div>
         {recipes.map((recipe) => (
-          <Card key={recipe.id} recipe={recipe} />
+          <Card key={recipe.id} id={recipe.id} />
         ))}
       </div>
     </>
