@@ -1,7 +1,7 @@
 export default function Card() {
   return (
     <div
-      className="card flex bg-white flex-col items-center rounded-lg  border-1 shadow-xl p-1 hover:cursor-pointer md:w-96"
+      className="card flex bg-white flex-col items-center rounded-lg  border-1 shadow-xl p-1 hover:cursor-pointer"
       onClick={() => (window.location.href = '/recette')}
     >
       <figure>

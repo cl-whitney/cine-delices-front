@@ -20,7 +20,7 @@ export default function HomePage() {
 
         <div className="bg-gray-200 p-6 rounded-lg shadow-xl">
           <section aria-labelledby="inspirations-section">
-            <div className="grid grid-cols-1 gap-6 gap-y-8 justify-items-center md:grid-cols-3">
+            <div className="grid grid-cols-1 gap-6 justify-items-center md:grid-cols-3">
               {Array.from({ length: 12 }).map((_, index) => (
                 <Card key={index} />
               ))}

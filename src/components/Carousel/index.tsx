@@ -4,9 +4,7 @@ export default function Carousel() {
       <div className="carousel-inner">
         <article className="featured-article flex flex-col md:flex-row items-start gap-4">
           <div className="flex-1">
-            <h1 className="mb-2 text-[var(--button-color)] text-shadow-lg">
-              À la une{' '}
-            </h1>
+            <h1 className="mb-2 text-[var(--button-color)] ">À la une </h1>
             <div className="carousel w-full">
               <div id="item1" className="carousel-item w-full">
                 <img
