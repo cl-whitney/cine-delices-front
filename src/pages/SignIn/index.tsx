@@ -59,7 +59,7 @@ export default function AccountCreationPage() {
             />
           </div>
           <div className="flex items-start gap-2">
-            <input type="checkbox" defaultChecked className="checkbox" />
+            <input type="checkbox" className="checkbox" />
             <label htmlFor="terms" className="text-sm">
               J’ai lu, j’accepte les{' '}
               <Link

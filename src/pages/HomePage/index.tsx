@@ -1,10 +1,7 @@
-import { useNavigate } from 'react-router-dom';
 import Card from '../../components/Card';
 import Carousel from '../../components/Carousel';
 
 export default function HomePage() {
-  const navigate = useNavigate();
-
   return (
     <>
       {/* Section "À la une" sous forme de carrousel */}
@@ -19,24 +16,22 @@ export default function HomePage() {
         </h2>
 
         <div className="bg-gray-200 p-6 rounded-lg shadow-xl">
-          <section aria-labelledby="inspirations-section">
-            <div className="grid grid-cols-1 gap-6 justify-items-center md:grid-cols-3">
-              {Array.from({ length: 12 }).map((_, index) => (
-                <Card key={index} />
-              ))}
-            </div>
-            {/* Bouton "Voir plus d'inspiration" */}
-            <div className="more-inspiration">
-              <button
-                className="btn  rounded-full text-white bg-[var(--button-color)] hover:bg-[#a31616] transition-colors mt-8 mx-auto block md:btn-lg"
-                type="button"
-                aria-label="Voir plus d'inspiration"
-                onClick={() => navigate('/recettes')}
-              >
-                Voir plus d'inspiration
-              </button>
-            </div>
-          </section>
+          <div className="grid grid-cols-1 gap-6 justify-items-center md:grid-cols-3 md:gap-18">
+            {Array.from({ length: 12 }).map((_, index) => (
+              <Card key={index} />
+            ))}
+          </div>
+          {/* Bouton "Voir plus d'inspiration" */}
+          <div className="more-inspiration">
+            <button
+              className="btn  rounded-full text-white bg-[var(--button-color)] hover:bg-[#a31616] transition-colors mt-8 mx-auto block md:btn-lg"
+              type="button"
+              aria-label="Voir plus d'inspiration"
+              onClick={() => navigate('/recettes')}
+            >
+              Voir plus d'inspiration
+            </button>
+          </div>
         </div>
       </div>
     </>

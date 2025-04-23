@@ -1,11 +1,13 @@
-import { faEuroSign } from '@fortawesome/free-solid-svg-icons';
-import { faFireBurner } from '@fortawesome/free-solid-svg-icons';
-import { faClock } from '@fortawesome/free-solid-svg-icons';
+import {
+  faClock,
+  faEuroSign,
+  faFireBurner,
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 export default function Recipe() {
   return (
     <div className="space-y-6  ">
-      <div className="grid md:grid-cols-2 gap-6 items-start rounded-lg shadow-xl bg-gray-100 px-4">
+      <div className="grid md:grid-cols-2 gap-6 items-start rounded-lg shadow-xl bg-gray-100 px-4 py-4">
         <div>
           <h1 className="text-[var(--button-color)] text-shadow-lg">
             L’entrecôte du Seigneur des Anneaux
@@ -38,16 +40,8 @@ export default function Recipe() {
         <img
           src="/src/assets/recipe.jpg"
           alt="L’entrecôte du Seigneur des Anneaux"
-          className="rounded-lg shadow-lg mt-10"
+          className="rounded-lg shadow-lg"
         />
-        <div className="flex justify-end mb-5">
-          <button
-            type="button"
-            className="btn btn- rounded-full text-white bg-[var(--button-color)] hover:bg-[#a31616] transition-colors"
-          >
-            Voir plus
-          </button>
-        </div>
       </div>
 
       <div className="flex justify-evenly items-center bg-gray-100 p-4 rounded-lg shadow-xl">
@@ -85,12 +79,12 @@ export default function Recipe() {
       </div>
 
       <div className="bg-gray-100 p-4 rounded-lg shadow-xl">
-        <div className="flex justify-between items-center mb-4">
+        <div className="flex justify-between items-center">
           <h2 className="text-[var(--button-color)] text-shadow-lg">
             Ingrédients
           </h2>
         </div>
-        <div className="flex items-center mb-4">
+        <div className="flex items-center mb-6">
           <button
             type="button"
             className="btn btn-m bg-white hover:bg-[var(--button-color)] hover:text-white transition-colors rounded-lg"
@@ -105,7 +99,7 @@ export default function Recipe() {
             +
           </button>
         </div>
-        <ul className="list-disc pl-6 text-gray-700 space-y-2">
+        <ul className=" list-disc grid grid-flow-col grid-rows-6 gap-y-2 gap-x-4 pl-5">
           <li>1 belle entrecôte de bœuf</li>
           <li>2 gousses d’ail</li>
           <li>1 échalote</li>
@@ -125,8 +119,8 @@ export default function Recipe() {
             Préparation
           </h2>
         </div>
-        <ul className="steps steps-vertical">
-          <div className="flex justify-between items-center mb-4">
+        <ul className="steps steps-vertical grid grid-flow-col grid-rows-6 gap-y-2 gap-x-4 pl-9">
+          <div className="flex items-center mb-4">
             <li className="step step-warning" />
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -135,7 +129,7 @@ export default function Recipe() {
               aliquid, vitae hic sint molestiae? Doloremque!
             </p>
           </div>
-          <div className="flex justify-between items-center mb-4">
+          <div className="flex items-center mb-4">
             <li className="step step-warning" />
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -144,7 +138,7 @@ export default function Recipe() {
               aliquid, vitae hic sint molestiae? Doloremque!
             </p>
           </div>
-          <div className="flex justify-between items-center mb-4">
+          <div className="flex items-center mb-4">
             <li className="step step-warning" />
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -153,7 +147,52 @@ export default function Recipe() {
               aliquid, vitae hic sint molestiae? Doloremque!
             </p>
           </div>
-          <div className="flex justify-between items-center mb-4">
+          <div className="flex items-center mb-4">
+            <li className="step step-warning" />
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Quibusdam cumque dolor nam accusamus modi voluptatibus nisi
+              mollitia minima fugiat facilis velit numquam, commodi ratione
+              aliquid, vitae hic sint molestiae? Doloremque!
+            </p>
+          </div>
+          <div className="flex items-center mb-4">
+            <li className="step step-warning" />
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Quibusdam cumque dolor nam accusamus modi voluptatibus nisi
+              mollitia minima fugiat facilis velit numquam, commodi ratione
+              aliquid, vitae hic sint molestiae? Doloremque!
+            </p>
+          </div>
+          <div className="flex items-center mb-4">
+            <li className="step step-warning" />
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Quibusdam cumque dolor nam accusamus modi voluptatibus nisi
+              mollitia minima fugiat facilis velit numquam, commodi ratione
+              aliquid, vitae hic sint molestiae? Doloremque!
+            </p>
+          </div>
+          <div className="flex items-center mb-4">
+            <li className="step step-warning" />
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Quibusdam cumque dolor nam accusamus modi voluptatibus nisi
+              mollitia minima fugiat facilis velit numquam, commodi ratione
+              aliquid, vitae hic sint molestiae? Doloremque!
+            </p>
+          </div>
+          <div className="flex items-center mb-4">
+            <li className="step step-warning" />
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Quibusdam cumque dolor nam accusamus modi voluptatibus nisi
+              mollitia minima fugiat facilis velit numquam, commodi ratione
+              aliquid, vitae hic sint molestiae? Doloremque!
+            </p>
+          </div>
+          <div className="flex items-center mb-4">
             <li className="step step-warning" />
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.

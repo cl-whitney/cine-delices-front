@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import About from './pages/About';
+import AddRecipe from './pages/AddRecipe';
 import CGU from './pages/CGU';
 import Contact from './pages/Contact';
 import Error404 from './pages/Error404';
@@ -22,7 +23,7 @@ export default function App() {
       <BrowserRouter>
         {/* En-tête du site */}
         <Header />
-        <div className="main-container">
+        <main>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/recettes" element={<SearchPage />} />
@@ -34,10 +35,11 @@ export default function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/a-propos" element={<About />} />
             <Route path="/recette" element={<Recipe />} />
+            <Route path="/Addrecette/" element={<AddRecipe />} />
             {/* <Route path='' element={}/> */}
             <Route path="*" element={<Error404 />} />
           </Routes>
-        </div>
+        </main>
         <Footer />
       </BrowserRouter>
     </>

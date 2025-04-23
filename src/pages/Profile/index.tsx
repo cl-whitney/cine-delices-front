@@ -1,10 +1,9 @@
-import { faUser } from '@fortawesome/free-solid-svg-icons';
-import { faUtensils } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faUtensils } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function UserPage() {
   return (
-    <div>
+    <div className="flex flex-col items-center justify-center min-h-[75vh] ">
       <div className="flex items-center gap-2">
         <FontAwesomeIcon
           icon={faUser}

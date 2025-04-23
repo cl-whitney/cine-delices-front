@@ -2,7 +2,7 @@ export default function Contact() {
   return (
     <div
       aria-label="Page de contact de CinéDélices"
-      className="my-20 bg-gray-200 p-6 rounded-lg shadow-xl"
+      className="my-20 bg-gray-200 p-4 rounded-lg shadow-xl"
     >
       <section id="contact" className="contact-section">
         <header>

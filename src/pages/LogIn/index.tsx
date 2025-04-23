@@ -4,7 +4,7 @@ export default function LoginPage() {
   const navigate = useNavigate();
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-[75vh]  ">
+    <div className="flex flex-col items-center justify-center min-h-[75vh] ">
       <div className="w-full max-w-md  border-2 border-gray-300 rounded-lg px-8 py-4 my-4 shadow-2xl sm:max-w-xl sm:py-8 ">
         <h2 className="text-center pb-2 text-shadow-lg">Connexion</h2>
         <form className="flex flex-col gap-6">
