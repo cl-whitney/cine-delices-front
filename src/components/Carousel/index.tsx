@@ -6,8 +6,8 @@ export default function Carousel() {
       <div className="carousel-inner">
         <article className="featured-article flex flex-col md:flex-row items-start gap-4">
           <div className="flex-1">
-            <h1 className="mb-2 text-[var(--button-color)] text-shadow-lg">
-              À la une{' '}
+            <h1 className="H1-Carousel text-[var(--button-color)] text-shadow-lg">
+              À la une
             </h1>
             <div className="carousel w-full">
               <div id="item1" className="carousel-item w-full">
@@ -86,7 +86,7 @@ export default function Carousel() {
               />
             </div>
           </div>
-          <div className="flex-1 pt-0 md:pt-21">
+          <div className="flex-1 pt-0 md:pt-30 pl-3">
             <h2 className="text-2xl font-bold mb-4 text-[var(--button-color)] text-shadow-lg">
               Retour vers le futur
             </h2>

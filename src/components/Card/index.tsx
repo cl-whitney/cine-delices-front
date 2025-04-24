@@ -1,15 +1,17 @@
+import { Link } from 'react-router-dom';
+
 export default function Card() {
   return (
-    <div
-      className="card flex bg-white flex-col items-center rounded-lg  border-1 shadow-xl p-1 hover:cursor-pointer"
-      onClick={() => (window.location.href = '/recette')}
+    <Link
+      to="/recette"
+      className="card flex bg-white flex-col items-center rounded-lg border border-gray-300 shadow-xl p-1 hover:cursor-pointer"
     >
       <figure>
         <img
           src="./src/assets/recipe.jpg"
           alt="Salade périfée de Frodon"
           loading="lazy"
-          className="rounded-lg "
+          className="rounded-lg"
         />
       </figure>
       <div className="card-body">
@@ -19,6 +21,6 @@ export default function Card() {
           title and actions parts
         </p>
       </div>
-    </div>
+    </Link>
   );
 }

@@ -22,6 +22,16 @@ main {
   margin-right: 1%;
 }
 
+.H2-HomePage {
+  font-size: 3rem;
+  margin: 3rem 0rem 1rem 1rem;
+}
+
+.H1-Carousel {
+  font-size: 4rem;
+  margin: 2rem 0rem 1rem 1rem;
+}
+
 @media (max-width: 767px) {
   p {
     font-size: 0.9rem;
