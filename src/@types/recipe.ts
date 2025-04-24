@@ -25,8 +25,12 @@ export interface IRecipe {
   updated_at?: string;
 }
 
+export interface IRecipeProps {
+  recipe: IRecipe;
+}
+
 export interface IRecipeStore {
-  recipe: IRecipe[];
+  recipes: IRecipe[];
   // permet de déclencher une fonction asynchrone (ex: requête http pour récupérer des datas api)
-  fetchRecipe: () => Promise<void>;
+  fetchRecipes: () => Promise<void>;
 }

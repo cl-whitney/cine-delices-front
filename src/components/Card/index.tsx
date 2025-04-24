@@ -1,23 +1,6 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
-import type { IRecipe } from '../../@types/recipe';
+import type { IRecipeProps } from '../../@types/recipe';
 
-export default function Card({ id }: IRecipe) {
-  const [recipe, setRecipe] = useState<IRecipe | undefined>(undefined);
-
-  useEffect(() => {
-    async function fetchRecipe() {
-      try {
-        const response = await axios.get(
-          `http://localhost:3000/api/recette/${id}`,
-        );
-        setRecipe(response.data);
-      } catch (_e) {
-        console.log(_e);
-      }
-    }
-    fetchRecipe();
-  }, [id]);
+export default function Card({ recipe }: IRecipeProps) {
   return (
     <>
       <article className="card">
