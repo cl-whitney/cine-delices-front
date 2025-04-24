@@ -1,23 +1,18 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import type { IRecipe } from '../../@types/recipe';
 import Card from '../../components/Card';
 import Carousel from '../../components/Carousel';
+import { useRecipeStore } from '../../store/RecipeStore';
 
 export default function HomePage() {
   const navigate = useNavigate();
-  const [recipes, setRecipes] = useState<IRecipe[]>([]);
+
+  const { recipes, fetchRecipes } = useRecipeStore();
 
   useEffect(() => {
-    const fetchAndSaveDataInState = async () => {
-      try {
-        const response = await axios.get('http://localhost:3000');
-        setRecipes(response.data.recipes);
-      } catch (_e) {}
-    };
-    fetchAndSaveDataInState();
-  }, []);
+    fetchRecipes();
+  }, [fetchRecipes]);
+
   return (
     <>
       {/* Section "À la une" sous forme de carrousel */}

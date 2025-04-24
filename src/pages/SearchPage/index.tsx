@@ -73,7 +73,7 @@ export default function SearchPage() {
   useEffect(() => {
     fetchRecipes();
   }, [fetchRecipes]);
-  console.log('Données pour map', recipes);
+
   return (
     <>
       <div className="dropdown">

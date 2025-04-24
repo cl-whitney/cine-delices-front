@@ -1,41 +1,46 @@
 import axios from 'axios';
-// Import type pour esquiver l'erreur de biome sur l'import (import de typage et non dans le code exécutable)
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import type { IRecipe } from '../../@types/recipe';
 
 export default function Recipe() {
   const { id } = useParams();
-  const [recipeData, setRecipeData] = useState<IRecipe>();
+  const [recipe, setRecipe] = useState<IRecipe>();
 
   useEffect(() => {
-    const fetchRecipe = async () => {
+    async function fetchRecipes() {
       try {
         const response = await axios.get(
           `http://localhost:3000/api/recettes/${id}`,
         );
-        setRecipeData(response.data);
-      } catch (_e) {}
-    };
-    fetchRecipe();
-  }, [id]);
+        setRecipe(response.data);
+      } catch (_e) {
+        // console.log('Erreur :', _e)
+      }
+    }
+    fetchRecipes();
+  });
+
   return (
     <>
-      {recipeData ? (
+      {recipe ? (
         <>
-          <h3>{recipeData.title}</h3>
-          <img src={recipeData.image} alt={recipeData.title} />
-          <p>{recipeData.description}</p>
+          <h3>{recipe.title}</h3>
+          <img src={recipe.image} alt={recipe.title} />
+          <p>{recipe.description}</p>
           <table>
             <tr>
-              <td>{recipeData.difficulty}</td>
-              <td>{recipeData.cost}</td>
+              <td>{recipe.difficulty}</td>
+              <td>{recipe.cost}</td>
             </tr>
           </table>
-          <p>Poposé par : {recipeData.user_id}</p>
           <p>
-            Mis en ligne le : {recipeData.created_at} / Dernière modification le
-            :{recipeData.updated_at}
+            Poposé par :
+            {recipe.user_id ? recipe.user_id : 'Utilisateur Supprimé'}
+          </p>
+          <p>
+            Mis en ligne le : {recipe.created_at} / Dernière modification le :
+            {recipe.updated_at ? recipe.updated_at : recipe.created_at}
           </p>
         </>
       ) : (
