@@ -17,6 +17,6 @@ export interface IUser {
 }
 
 export interface IUserStore {
-  recipes: IUser[];
+  users: IUser[];
   fetchUsers: () => Promise<void>;
 }
