@@ -1,27 +1,56 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useLogStore } from '../../store/LogStore';
 
 export default function LoginPage() {
   const navigate = useNavigate();
 
+  const { login } = useLogStore();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleLogIn = async (e: React.FormEvent) => {
+    e.preventDefault();
+    try {
+      await login(email, password);
+      navigate('/');
+    } catch (_e) {
+      // console.log('Erreur :', _e);
+    }
+  };
+
+  // A transposer dans le HeaderNav
+  // const handleLogOut = async () => {
+  //   try {
+  //     await logout();
+  //   } catch (_e) {
+  //     // console.log('Erreur :', _e);
+  //   }
+  // };
+
   return (
     <div>
       <h1>SE CONNECTER</h1>
-      <form>
-        <label htmlFor="emailOrUsername">Email ou Pseudo</label>
+      <form method="post">
+        <label htmlFor="email">Email</label>
         <input
-          type="text"
-          id="emailOrUsername"
-          name="emailOrUsername"
-          placeholder="Entrez votre email ou pseudo"
-          aria-label="Email ou Pseudo"
+          type="email"
+          id="email"
+          name="email"
+          value={email}
+          placeholder="Entrez votre email"
+          aria-label="Email"
+          onChange={(e) => setEmail(e.target.value)}
         />
         <label htmlFor="password">Mot de passe</label>
         <input
           type="password"
           id="password"
+          value={password}
           name="password"
           placeholder="Entrez votre mot de passe"
           aria-label="Mot de passe"
+          onChange={(e) => setPassword(e.target.value)}
         />
         <button
           type="button"
@@ -32,9 +61,9 @@ export default function LoginPage() {
           Mot de passe oublié
         </button>
         <button
-          type="button"
+          type="submit"
           className="btn rounded-full text-white bg-[var(--button-color)] hover:bg-[#a31616] transition-colors"
-          // onClick={() => }
+          onClick={handleLogIn}
           aria-label="Se connecter"
         >
           Se connecter
