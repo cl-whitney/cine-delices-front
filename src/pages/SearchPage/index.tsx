@@ -5,7 +5,7 @@ import Card from '../../components/Card';
 export default function SearchPage() {
   return (
     <>
-      <div className="flex flex-row justify-center my-4">
+      <div className="flex flex-row justify-center my-10">
         <div className="dropdown dropdown-start">
           <button
             type="button"
@@ -82,11 +82,14 @@ export default function SearchPage() {
           </ul>
         </div>
       </div>
-      <div className="bg-gray-200 p-6 rounded-lg shadow-xl mb-10">
-        <div className="grid grid-cols-1 gap-6 justify-items-center md:grid-cols-3 md:gap-18">
-          {Array.from({ length: 12 }).map((_, index) => (
-            <Card key={index} />
-          ))}
+
+      <div className=" flex items-center flex-col px-4 md:px-8 pb-12 rounded-lg ">
+        <div className="bg-gray-200 p-6 rounded-lg shadow-xl  md:w-[75%]">
+          <div className="grid grid-cols-1 gap-6 justify-items-center md:grid-cols-3 md:gap-18">
+            {Array.from({ length: 12 }).map((_, index) => (
+              <Card key={index} />
+            ))}
+          </div>
         </div>
       </div>
     </>
