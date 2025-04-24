@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 export default function Recipe() {
   return (
     <div className="space-y-6  ">
-      <div className="grid md:grid-cols-2 gap-6 items-start rounded-lg shadow-xl bg-gray-100 px-4 py-4">
+      <div className="grid md:grid-cols-2 gap-6 items-start rounded-lg shadow-xl bg-gray-100 p-4 ">
         <div>
           <h1 className="text-[var(--button-color)] text-shadow-lg">
             L’entrecôte du Seigneur des Anneaux
@@ -99,7 +99,7 @@ export default function Recipe() {
             +
           </button>
         </div>
-        <ul className=" list-disc grid grid-flow-col grid-rows-6 gap-y-2 gap-x-4 pl-5">
+        <ul className=" list-disc grid md:grid-flow-col md:grid-rows-6 gap-y-2 gap-x-4 pl-5">
           <li>1 belle entrecôte de bœuf</li>
           <li>2 gousses d’ail</li>
           <li>1 échalote</li>
@@ -119,7 +119,7 @@ export default function Recipe() {
             Préparation
           </h2>
         </div>
-        <ul className="steps steps-vertical grid grid-flow-col grid-rows-6 gap-y-2 gap-x-4 pl-9">
+        <ul className="steps steps-vertical grid md:grid-flow-col md:grid-rows-6 gap-y-2 gap-x-4 pl-9">
           <div className="flex items-center mb-4">
             <li className="step step-warning" />
             <p>

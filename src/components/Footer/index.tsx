@@ -32,7 +32,7 @@ export default function Footer() {
           </li>
         </ul>
       </nav>
-      <div className="bg-red-700 p-1 flex justify-evenly text-white text-xl">
+      <div className="bg-[var(--background-secondary-color)] p-1 flex justify-evenly text-white text-xl">
         <a
           href="https://www.facebook.com"
           aria-label="Facebook"

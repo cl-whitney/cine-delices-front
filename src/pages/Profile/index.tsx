@@ -1,5 +1,6 @@
 import { faUser, faUtensils } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
 
 export default function UserPage() {
   return (
@@ -98,15 +99,16 @@ export default function UserPage() {
           </ul>
         </section>
       </div>
-      <div className="my-16 flex flex-col sm:flex-row gap-4">
-        <button
-          type="button"
-          className="btn rounded-full btn-lg text-white bg-[var(--button-color)] hover:bg-[#a31616] transition-colors"
-          aria-label="Ajouter une nouvelle recette"
-        >
-          Ajouter une recette
-        </button>
-        {/* Bouton Supprimer le Compte */}
+      <div className="my-16 flex flex-col sm:flex-row gap-4 items-center">
+        <Link to="/ajout-recette">
+          <button
+            type="button"
+            className="btn rounded-full btn-lg text-white bg-[var(--button-color)] hover:bg-[#a31616] transition-colors"
+            aria-label="Ajouter une nouvelle recette"
+          >
+            Ajouter une recette
+          </button>
+        </Link>
         <button
           type="button"
           className="btn rounded-full btn-lg text-white bg-[var(--button-color)] hover:bg-[#a31616] transition-colors"

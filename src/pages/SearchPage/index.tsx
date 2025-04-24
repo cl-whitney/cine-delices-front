@@ -5,7 +5,7 @@ import Card from '../../components/Card';
 export default function SearchPage() {
   return (
     <>
-      <div className="flex flex-row justify-center mb-10 ">
+      <div className="flex flex-row justify-center my-4">
         <div className="dropdown dropdown-start">
           <button
             type="button"

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Card from '../../components/Card';
 import Carousel from '../../components/Carousel';
 
@@ -5,7 +6,7 @@ export default function HomePage() {
   return (
     <>
       {/* Section "À la une" sous forme de carrousel */}
-      <div className="shadow-xl rounded-lg p-6">
+      <div className="shadow-xl rounded-lg">
         <Carousel />
       </div>
 
@@ -23,14 +24,18 @@ export default function HomePage() {
           </div>
           {/* Bouton "Voir plus d'inspiration" */}
           <div className="more-inspiration">
-            <button
-              className="btn  rounded-full text-white bg-[var(--button-color)] hover:bg-[#a31616] transition-colors mt-8 mx-auto block md:btn-lg"
-              type="button"
-              aria-label="Voir plus d'inspiration"
-              onClick={() => navigate('/recettes')}
-            >
-              Voir plus d'inspiration
-            </button>
+            <Link to="/recettes">
+              <button
+                className="btn  rounded-full text-white bg-[var(--button-color)] hover:bg-[#a31616] transition-colors mt-8 mx-auto block md:btn-lg"
+                type="button"
+                aria-label="Voir plus d'inspiration"
+                onClick={() => {
+                  window.scrollTo({ top: 0 });
+                }}
+              >
+                Voir plus d'inspiration
+              </button>
+            </Link>
           </div>
         </div>
       </div>

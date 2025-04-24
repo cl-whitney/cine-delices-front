@@ -35,7 +35,7 @@ export default function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/a-propos" element={<About />} />
             <Route path="/recette" element={<Recipe />} />
-            <Route path="/Addrecette/" element={<AddRecipe />} />
+            <Route path="/ajout-recette" element={<AddRecipe />} />
             {/* <Route path='' element={}/> */}
             <Route path="*" element={<Error404 />} />
           </Routes>

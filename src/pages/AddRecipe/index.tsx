@@ -7,10 +7,48 @@ import {
   faUsers,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useState } from 'react';
+
 export default function AddRecipe() {
+  const [ingredients, setIngredients] = useState(['']);
+
+  const handleAddIngredient = () => {
+    setIngredients([...ingredients, '']);
+  };
+
+  const handleRemoveLastIngredient = () => {
+    if (ingredients.length > 1) {
+      setIngredients(ingredients.slice(0, -1));
+    }
+  };
+
+  const handleIngredientChange = (index, value) => {
+    const updatedIngredients = [...ingredients];
+    updatedIngredients[index] = value;
+    setIngredients(updatedIngredients);
+  };
+
+  const [steps, setSteps] = useState(['']);
+
+  const handleAddStep = () => {
+    setSteps([...steps, '']);
+  };
+
+  const handleRemoveLastStep = () => {
+    if (steps.length > 1) {
+      setSteps(steps.slice(0, -1));
+    }
+  };
+
+  const handleStepChange = (index, value) => {
+    const updatedSteps = [...steps];
+    updatedSteps[index] = value;
+    setSteps(updatedSteps);
+  };
+
   return (
-    <div className="space-y-6  ">
-      <div className="grid md:grid-cols-2 gap-6 items-start rounded-lg shadow-xl bg-gray-100 px-4 py-6">
+    <div className="space-y-6 ">
+      <div className="grid md:grid-cols-2 gap-6 items-start rounded-lg shadow-xl bg-gray-100 pl-6 py-6">
         <div>
           <h2 className="text-[var(--button-color)] text-shadow-lg">
             Nom de la recette
@@ -18,7 +56,7 @@ export default function AddRecipe() {
           <input
             type="text"
             placeholder="Nom de la recette"
-            className="input border-b-2 border-gray-300 focus:outline-none focus:border-[var(--button-color)] border-b-[var(--button-color)]"
+            className="input border-b-2 border-gray-300 focus:outline-none focus:border-[var(--button-color)] border-b-[var(--button-color)] mb-4"
           />
           <h2 className="text-[var(--button-color)] text-shadow-lg">
             Selectionner les catégories
@@ -206,137 +244,76 @@ export default function AddRecipe() {
           </div>
         </div>
         <p className="text-black text-shadow-lg">Liste des ingrédients</p>
-
-        <ul className="grid grid-flow-col grid-rows-6 gap-y-2 gap-x-4 list-decimal pl-4 md:pl-9">
-          {' '}
-          <li>
-            <input
-              type="text"
-              className="input border-b-2 border-gray-300 focus:outline-none focus:border-[var(--button-color)] border-b-[var(--button-color)]"
-              placeholder="Choisissez un ingrédient"
-              list="ingrédient"
-            />
-            <datalist id="ingrédient">
-              <option value="Sel" />
-              <option value="Poivre" />
-              <option value="Tomate" />
-              <option value="sucre" />
-            </datalist>
-          </li>
-          <li>
-            <input
-              type="text"
-              className="input border-b-2 border-gray-300 focus:outline-none focus:border-[var(--button-color)] border-b-[var(--button-color)]"
-              placeholder="Choisissez un ingrédient"
-              list="ingrédient"
-            />
-            <datalist id="ingrédient">
-              <option value="Sel" />
-              <option value="Poivre" />
-              <option value="Tomate" />
-              <option value="sucre" />
-            </datalist>
-          </li>
-          <li>
-            <input
-              type="text"
-              className="input border-b-2 border-gray-300 focus:outline-none focus:border-[var(--button-color)] border-b-[var(--button-color)]"
-              placeholder="Choisissez un ingrédient"
-              list="ingrédient"
-            />
-            <datalist id="ingrédient">
-              <option value="Sel" />
-              <option value="Poivre" />
-              <option value="Tomate" />
-              <option value="sucre" />
-            </datalist>
-          </li>
-          <li>
-            <input
-              type="text"
-              className="input border-b-2 border-gray-300 focus:outline-none focus:border-[var(--button-color)] border-b-[var(--button-color)]"
-              placeholder="Choisissez un ingrédient"
-              list="ingrédient"
-            />
-            <datalist id="ingrédient">
-              <option value="Sel" />
-              <option value="Poivre" />
-              <option value="Tomate" />
-              <option value="sucre" />
-            </datalist>
-          </li>
-          <li>
-            <input
-              type="text"
-              className="input border-b-2 border-gray-300 focus:outline-none focus:border-[var(--button-color)] border-b-[var(--button-color)]"
-              placeholder="Choisissez un ingrédient"
-              list="ingrédient"
-            />
-            <datalist id="ingrédient">
-              <option value="Sel" />
-              <option value="Poivre" />
-              <option value="Tomate" />
-              <option value="sucre" />
-            </datalist>
-          </li>
-          <li>
-            <input
-              type="text"
-              className="input border-b-2 border-gray-300 focus:outline-none focus:border-[var(--button-color)] border-b-[var(--button-color)]"
-              placeholder="Choisissez un ingrédient"
-              list="ingrédient"
-            />
-            <datalist id="ingrédient">
-              <option value="Sel" />
-              <option value="Poivre" />
-              <option value="Tomate" />
-              <option value="sucre" />
-            </datalist>
-          </li>
+        <button
+          type="button"
+          className="btn btn-circle bg-[var(--button-color)] text-white shadow-xl hover:bg-[var(--hover-button-color)] mx-6 my-4"
+          onClick={handleRemoveLastIngredient}
+        >
+          -
+        </button>
+        <button
+          type="button"
+          className="btn btn-circle bg-[var(--button-color)] text-white shadow-xl hover:bg-[var(--hover-button-color)]"
+          onClick={handleAddIngredient}
+        >
+          +
+        </button>
+        <ul className="grid md:grid-flow-col md:grid-rows-6 gap-y-2 gap-x-4 list-decimal pl-4 md:pl-9">
+          {ingredients.map((ingredient, index) => (
+            <li key={index}>
+              <input
+                type="text"
+                className="input border-b-2 border-gray-300 focus:outline-none focus:border-[var(--button-color)]"
+                placeholder="Choisissez un ingrédient"
+                list="ingredient-options"
+                value={ingredient}
+                onChange={(e) => handleIngredientChange(index, e.target.value)}
+              />
+              <datalist id="ingredient-options">
+                <option value="Sel" />
+                <option value="Poivre" />
+                <option value="Tomate" />
+                <option value="Sucre" />
+              </datalist>
+            </li>
+          ))}
         </ul>
       </div>
       <div className="bg-gray-100 p-4 rounded-lg shadow-xl">
-        <div>
-          <h2 className="text-[var(--button-color)] text-shadow-lg">
-            Préparation par étapes
-          </h2>
+        <h2 className="text-[var(--button-color)] text-shadow-lg">
+          Préparation par étapes
+        </h2>
+        <div className="mb-4">
+          <button
+            type="button"
+            className="btn btn-circle bg-[var(--button-color)] text-white shadow-xl hover:bg-[var(--hover-button-color)] mx-6 my-2"
+            onClick={handleRemoveLastStep}
+          >
+            -
+          </button>
+          <button
+            type="button"
+            className="btn btn-circle bg-[var(--button-color)] text-white shadow-xl hover:bg-[var(--hover-button-color)]"
+            onClick={handleAddStep}
+          >
+            +
+          </button>
         </div>
-        <ul className="steps steps-vertical grid grid-flow-col grid-rows-6 gap-y-2 gap-x-4 md:pl-4">
-          <div className="flex mb-4">
-            <li className="step step-warning" />
-            <textarea
-              className="textarea textarea-lg border-2 border-gray-300 focus:outline-none focus:border-[var(--button-color)]"
-              placeholder="Décrire la recette"
-            />
-          </div>
-          <div className="flex mb-4">
-            <li className="step step-warning" />
-            <textarea
-              className="textarea textarea-lg border-2 border-gray-300 focus:outline-none focus:border-[var(--button-color)]"
-              placeholder="Décrire la recette"
-            />
-          </div>
-          <div className="flex mb-4">
-            <li className="step step-warning" />
-            <textarea
-              className="textarea textarea-lg border-2 border-gray-300 focus:outline-none focus:border-[var(--button-color)]"
-              placeholder="Décrire la recette"
-            />
-          </div>
-          <div className="flex mb-4">
-            <li className="step step-warning" />
-            <textarea
-              className="textarea textarea-lg border-2 border-gray-300 focus:outline-none focus:border-[var(--button-color)]"
-              placeholder="Décrire la recette"
-            />
-          </div>
-          <div className="flex mb-4">
-            <li className="step step-warning" />
-            <textarea
-              className="textarea textarea-lg border-2 border-gray-300 focus:outline-none focus:border-[var(--button-color)]"
-              placeholder="Décrire la recette"
-            />
-          </div>
+        <ul className="steps steps-vertical grid md:grid-flow-col md:grid-rows-6 gap-y-2 gap-x-4 md:pl-4">
+          {steps.map((step, index) => (
+            <li key={index} className="step step-warning flex mb-4">
+              <textarea
+                className="textarea textarea-lg border-2 border-gray-300 focus:outline-none focus:border-[var(--button-color)]"
+                placeholder="Décrire la recette"
+                value={step}
+                onChange={(e) => {
+                  const updatedSteps = [...steps];
+                  updatedSteps[index] = e.target.value;
+                  setSteps(updatedSteps);
+                }}
+              />
+            </li>
+          ))}
         </ul>
       </div>
     </div>

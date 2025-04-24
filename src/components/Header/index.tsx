@@ -67,13 +67,15 @@ export default function Header() {
                   onChange={(e) => setSearchQuery(e.target.value)}
                   style={{ height: '40px' }}
                 />
-                <button
-                  type="submit"
-                  className="btn bg-white text-black rounded-r-full border-0"
-                  style={{ height: '40px', width: '40px' }}
-                >
-                  <FontAwesomeIcon icon={faSearch} color="black" />
-                </button>
+                <Link to="/recettes">
+                  <button
+                    type="submit"
+                    className="btn bg-white text-black rounded-r-full border-0"
+                    style={{ height: '40px', width: '40px' }}
+                  >
+                    <FontAwesomeIcon icon={faSearch} color="black" />
+                  </button>
+                </Link>
               </div>
             </form>
           ) : (
@@ -108,13 +110,15 @@ export default function Header() {
                   onChange={(e) => setSearchQuery(e.target.value)}
                   style={{ height: '40px' }}
                 />
-                <button
-                  type="submit"
-                  className="btn bg-white text-black rounded-r-full border-0"
-                  style={{ height: '40px', width: '40px' }}
-                >
-                  <FontAwesomeIcon icon={faSearch} color="black" />
-                </button>
+                <Link to="/recettes">
+                  <button
+                    type="submit"
+                    className="btn bg-white text-black rounded-r-full border-0"
+                    style={{ height: '40px', width: '40px' }}
+                  >
+                    <FontAwesomeIcon icon={faSearch} color="black" />
+                  </button>
+                </Link>
               </div>
             </form>
           </div>
