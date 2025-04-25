@@ -6,7 +6,9 @@ export default function About() {
       className="my-20 bg-gray-200 p-4 rounded-lg shadow-xl"
     >
       <header>
-        <h1 className="about-title">À propos de nous</h1>
+        <h1 className="about-title font-semibold my-[0.8rem] text-[2rem] md:my-4 md:text-[2.5rem]">
+          À propos de nous
+        </h1>
       </header>
       <div className="about-content">
         <p>

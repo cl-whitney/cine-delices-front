@@ -10,8 +10,10 @@ export default function Contact() {
         </header>
 
         <address aria-labelledby="contact">
-          <p>42 rue du Cinéma, 75000 Paris, France</p>
-          <p>
+          <p className="font-semibold my-[0.4rem] text-[0.9rem] md:my-4 md:text-[1rem]">
+            42 rue du Cinéma, 75000 Paris, France
+          </p>
+          <p className="font-semibold my-[0.4rem] text-[0.9rem] md:my-4 md:text-[1rem]">
             <a
               href="mailto:contact@CinéDélies.fr"
               aria-label="Envoyer un email à CinéDélices"
@@ -19,7 +21,7 @@ export default function Contact() {
               Email : contact@cinedelices.fr
             </a>
           </p>
-          <p>
+          <p className="font-semibold my-[0.4rem] text-[0.9rem] md:my-4 md:text-[1rem]">
             <a
               href="tel:+3378253695"
               aria-label="Appeler CinéDélices au 00 78 25 36 95"

@@ -47,6 +47,7 @@ export default function LoginPage() {
         <button
           type="button"
           className="btn rounded-full text-white bg-[var(--button-color)] hover:bg-[#a31616] transition-colors"
+          // TODO : Ajouter une page pour reset les mots de passes
           // onClick={() => }
           aria-label="Mot de passe oublié"
         >

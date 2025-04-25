@@ -28,6 +28,7 @@ export default function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/recettes" element={<SearchPage />} />
             <Route path="/recettes/:id" element={<Recipe />} />
+            <Route path="/ajout-recette" element={<AddRecipe />} />
             <Route path="/connexion" element={<LogIn />} />
             <Route path="/inscription" element={<SignIn />} />
             <Route path="/profil" element={<Profile />} />
@@ -36,7 +37,6 @@ export default function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/a-propos" element={<About />} />
             <Route path="/recette" element={<Recipe />} />
-            <Route path="/ajout-recette" element={<AddRecipe />} />
             {/* <Route path='' element={}/> */}
             <Route path="*" element={<Error404 />} />
           </Routes>

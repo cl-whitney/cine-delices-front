@@ -60,18 +60,6 @@ export default function HeaderLogIn() {
           ref={menuRef}
           className="absolute mt-10 bg-base-100 shadow-lg rounded-lg p-4 z-10 border border-gray-300 font-bold"
         >
-          <Link
-            to="/inscription"
-            className="block px-4 py-2 text-l whitespace-nowrap border-b border-gray-300"
-          >
-            Inscription
-          </Link>
-          <Link
-            to="/connexion"
-            className="block px-4 py-2 text-l whitespace-nowrap"
-          >
-            Se connecter
-          </Link>
           {!user ? (
             <>
               <Link
@@ -110,18 +98,6 @@ export default function HeaderLogIn() {
       {/* Boutons visibles en desktop */}
       {!isMobile && (
         <div className="flex space-x-2">
-          <Link
-            to="/inscription"
-            className="btn rounded-lg bg-[var(--button-color)] hover:bg-[#a31616] transition-colors text-white"
-          >
-            Inscription
-          </Link>
-          <Link
-            to="/connexion"
-            className="btn rounded-lg bg-white hover:bg-gray-100 transition-colors"
-          >
-            Se connecter
-          </Link>
           {!user ? (
             <>
               <Link

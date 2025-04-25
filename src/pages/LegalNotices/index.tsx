@@ -53,18 +53,22 @@ export default function LegalNotices() {
       {/* Contenu des mentions légales */}
       <section id="editeur" className="legal-section">
         <h2 className="legal-heading scroll-mt-20">1. Éditeur du site</h2>
-        <p>
+        <p className="font-semibold my-[0.4rem] text-[0.9rem] md:my-4 md:text-[1rem]">
           <strong className="font-bold text-lg md:font-bold">
             CinéDélices SAS
           </strong>
-          <p>42 rue du Cinéma</p>
-          <p>75000 Paris, France</p>
-          <p>
+          <p className="font-semibold my-[0.4rem] text-[0.9rem] md:my-4 md:text-[1rem]">
+            42 rue du Cinéma
+          </p>
+          <p className="font-semibold my-[0.4rem] text-[0.9rem] md:my-4 md:text-[1rem]">
+            75000 Paris, France
+          </p>
+          <p className="font-semibold my-[0.4rem] text-[0.9rem] md:my-4 md:text-[1rem]">
             <a href="mailto:contact@CinéDélies.fr">
               Email : contact@cinedelices.fr
             </a>
           </p>
-          <p>
+          <p className="font-semibold my-[0.4rem] text-[0.9rem] md:my-4 md:text-[1rem]">
             <a
               href="tel:+3378253695"
               aria-label="Appeler CinéDélices au 00 78 25 36 95"
@@ -77,11 +81,17 @@ export default function LegalNotices() {
 
       <section id="hebergeur" className="legal-section">
         <h2 className="legal-heading scroll-mt-20">2. Hébergeur</h2>
-        <p>
+        <p className="font-semibold my-[0.4rem] text-[0.9rem] md:my-4 md:text-[1rem]">
           <strong className="font-bold text-lg md:font-bold">OVHASH</strong>
-          <p>10 Rue des serveurs prennent feu</p>
-          <p>87000 TresLoin, France</p>
-          <p>Téléphone : 00 10 08 19 88</p>
+          <p className="font-semibold my-[0.4rem] text-[0.9rem] md:my-4 md:text-[1rem]">
+            10 Rue des serveurs prennent feu
+          </p>
+          <p className="font-semibold my-[0.4rem] text-[0.9rem] md:my-4 md:text-[1rem]">
+            87000 TresLoin, France
+          </p>
+          <p className="font-semibold my-[0.4rem] text-[0.9rem] md:my-4 md:text-[1rem]">
+            Téléphone : 00 10 08 19 88
+          </p>
         </p>
       </section>
 
@@ -89,7 +99,7 @@ export default function LegalNotices() {
         <h2 className="legal-heading scroll-mt-20">
           3. Propriété intellectuelle
         </h2>
-        <p>
+        <p className="font-semibold my-[0.4rem] text-[0.9rem] md:my-4 md:text-[1rem]">
           Tous les contenus présents sur le site CinéDélices (textes, images,
           recettes, vidéos, logos...) sont la propriété exclusive de CinéDélices
           ou de leurs auteurs respectifs. Toute reproduction, représentation ou
@@ -99,7 +109,7 @@ export default function LegalNotices() {
 
       <section id="donnees" className="legal-section">
         <h2 className="legal-heading scroll-mt-20">4. Données personnelles</h2>
-        <p>
+        <p className="font-semibold my-[0.4rem] text-[0.9rem] md:my-4 md:text-[1rem]">
           Aucune donnée personnelle n'est traitée de manière automatique.
           Toutefois, des données telles que le nom, prénom, et email peuvent
           être collectées via le formulaire de contact.
@@ -108,7 +118,7 @@ export default function LegalNotices() {
 
       <section id="cookies" className="legal-section">
         <h2 className="legal-heading scroll-mt-20">5. Cookies</h2>
-        <p>
+        <p className="font-semibold my-[0.4rem] text-[0.9rem] md:my-4 md:text-[1rem]">
           Ce site utilise des cookies pour améliorer l'expérience utilisateur.
           Vous pouvez gérer vos préférences de cookies en ajustant les
           paramètres de votre navigateur.
@@ -117,7 +127,7 @@ export default function LegalNotices() {
 
       <section id="droit" className="legal-section">
         <h2 className="legal-heading scroll-mt-20">6. Droit applicable</h2>
-        <p>
+        <p className="font-semibold my-[0.4rem] text-[0.9rem] md:my-4 md:text-[1rem]">
           Les présentes mentions légales sont régies par le droit français. En
           cas de litige, seuls les tribunaux français sont compétents.
         </p>
