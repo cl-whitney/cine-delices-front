@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import Card from '../../components/Card';
 import Carousel from '../../components/Carousel';
+import { useRecipeStore } from '../../store/RecipeStore';
 
 export default function HomePage() {
   return (
