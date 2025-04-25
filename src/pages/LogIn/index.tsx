@@ -19,6 +19,7 @@ export default function LoginPage() {
     }
   };
 
+  // TODO : A recheck avec la branch 03f
   return (
     <div>
       <h1>SE CONNECTER</h1>
