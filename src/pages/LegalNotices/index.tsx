@@ -1,0 +1,137 @@
+export default function LegalNotices() {
+  return (
+    <div
+      aria-label="Mentions légales de CinéDélices"
+      className="bg-gray-200 p-4 rounded-lg shadow-xl my-20"
+    >
+      <h1 className="legal-title">Mentions Légales</h1>
+      {/* Sommaire */}
+      <nav aria-labelledby="sommaire">
+        <h2 id="sommaire" className="legal-heading scroll-mt-20">
+          Sommaire
+        </h2>
+        <ul>
+          <li>
+            <a href="#editeur" aria-label="Aller à la section Éditeur du site">
+              1. Éditeur du site
+            </a>
+          </li>
+          <li>
+            <a href="#hebergeur" aria-label="Aller à la section Hébergeur">
+              2. Hébergeur
+            </a>
+          </li>
+          <li>
+            <a
+              href="#propriete"
+              aria-label="Aller à la section Propriété intellectuelle"
+            >
+              3. Propriété intellectuelle
+            </a>
+          </li>
+          <li>
+            <a
+              href="#donnees"
+              aria-label="Aller à la section Données personnelles"
+            >
+              4. Données personnelles
+            </a>
+          </li>
+          <li>
+            <a href="#cookies" aria-label="Aller à la section Cookies">
+              5. Cookies
+            </a>
+          </li>
+          <li>
+            <a href="#droit" aria-label="Aller à la section Droit applicable">
+              6. Droit applicable
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      {/* Contenu des mentions légales */}
+      <section id="editeur" className="legal-section">
+        <h2 className="legal-heading scroll-mt-20">1. Éditeur du site</h2>
+        <p className="font-semibold my-[0.4rem] text-[0.9rem] md:my-4 md:text-[1rem]">
+          <strong className="font-bold text-lg md:font-bold">
+            CinéDélices SAS
+          </strong>
+          <p className="font-semibold my-[0.4rem] text-[0.9rem] md:my-4 md:text-[1rem]">
+            42 rue du Cinéma
+          </p>
+          <p className="font-semibold my-[0.4rem] text-[0.9rem] md:my-4 md:text-[1rem]">
+            75000 Paris, France
+          </p>
+          <p className="font-semibold my-[0.4rem] text-[0.9rem] md:my-4 md:text-[1rem]">
+            <a href="mailto:contact@CinéDélies.fr">
+              Email : contact@cinedelices.fr
+            </a>
+          </p>
+          <p className="font-semibold my-[0.4rem] text-[0.9rem] md:my-4 md:text-[1rem]">
+            <a
+              href="tel:+3378253695"
+              aria-label="Appeler CinéDélices au 00 78 25 36 95"
+            >
+              Téléphone : 00 78 25 36 95
+            </a>
+          </p>
+        </p>
+      </section>
+
+      <section id="hebergeur" className="legal-section">
+        <h2 className="legal-heading scroll-mt-20">2. Hébergeur</h2>
+        <p className="font-semibold my-[0.4rem] text-[0.9rem] md:my-4 md:text-[1rem]">
+          <strong className="font-bold text-lg md:font-bold">OVHASH</strong>
+          <p className="font-semibold my-[0.4rem] text-[0.9rem] md:my-4 md:text-[1rem]">
+            10 Rue des serveurs prennent feu
+          </p>
+          <p className="font-semibold my-[0.4rem] text-[0.9rem] md:my-4 md:text-[1rem]">
+            87000 TresLoin, France
+          </p>
+          <p className="font-semibold my-[0.4rem] text-[0.9rem] md:my-4 md:text-[1rem]">
+            Téléphone : 00 10 08 19 88
+          </p>
+        </p>
+      </section>
+
+      <section id="propriete" className="legal-section">
+        <h2 className="legal-heading scroll-mt-20">
+          3. Propriété intellectuelle
+        </h2>
+        <p className="font-semibold my-[0.4rem] text-[0.9rem] md:my-4 md:text-[1rem]">
+          Tous les contenus présents sur le site CinéDélices (textes, images,
+          recettes, vidéos, logos...) sont la propriété exclusive de CinéDélices
+          ou de leurs auteurs respectifs. Toute reproduction, représentation ou
+          diffusion sans autorisation est interdite.
+        </p>
+      </section>
+
+      <section id="donnees" className="legal-section">
+        <h2 className="legal-heading scroll-mt-20">4. Données personnelles</h2>
+        <p className="font-semibold my-[0.4rem] text-[0.9rem] md:my-4 md:text-[1rem]">
+          Aucune donnée personnelle n'est traitée de manière automatique.
+          Toutefois, des données telles que le nom, prénom, et email peuvent
+          être collectées via le formulaire de contact.
+        </p>
+      </section>
+
+      <section id="cookies" className="legal-section">
+        <h2 className="legal-heading scroll-mt-20">5. Cookies</h2>
+        <p className="font-semibold my-[0.4rem] text-[0.9rem] md:my-4 md:text-[1rem]">
+          Ce site utilise des cookies pour améliorer l'expérience utilisateur.
+          Vous pouvez gérer vos préférences de cookies en ajustant les
+          paramètres de votre navigateur.
+        </p>
+      </section>
+
+      <section id="droit" className="legal-section">
+        <h2 className="legal-heading scroll-mt-20">6. Droit applicable</h2>
+        <p className="font-semibold my-[0.4rem] text-[0.9rem] md:my-4 md:text-[1rem]">
+          Les présentes mentions légales sont régies par le droit français. En
+          cas de litige, seuls les tribunaux français sont compétents.
+        </p>
+      </section>
+    </div>
+  );
+}

@@ -1,0 +1,105 @@
+@import "tailwindcss";
+@plugin "daisyui";
+@tailwind utilities;
+
+:root {
+  --background-secondary-color: #b71818;
+  --background-color: #eee3d3;
+  --button-color: #b71818;
+  --hover-button-color: #a31616;
+}
+
+#root {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+main {
+  padding-top: 75px; /* Ajustez cette valeur en fonction de la hauteur de votre header */
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+.H2-HomePage {
+  font-size: 3rem;
+  margin: 3rem 0rem 1rem 1rem;
+}
+
+.H1-Carousel {
+  font-size: 4rem;
+  margin: 2rem 0rem 1rem 1rem;
+}
+
+@media (max-width: 767px) {
+  p {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0.4rem 0rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0.8rem 0rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0.8rem 0rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0.8rem 0rem;
+  }
+
+  li {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  main {
+    padding-top: 58px; /* Ajustez cette valeur en fonction de la hauteur de votre header */
+    margin: 0% 1% 1% 1%;
+  }
+}
+
+@media (min-width: 768px) {
+  p {
+    font-size: 1 rem;
+    font-weight: 600;
+    margin: 1rem 0rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 1rem 0rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 1rem 0rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1rem 0rem;
+  }
+
+  li {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0.5rem 0rem;
+  }
+
+  main {
+    padding-top: 75px; /* Ajustez cette valeur en fonction de la hauteur de votre header */
+    margin: 0% 1% 1% 1%;
+  }
+}

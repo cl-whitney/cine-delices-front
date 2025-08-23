@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
+
+<svg
+   width="50"
+   height="50"
+   viewBox="0 -0.5 19.53125 19.53125"
+   fill="none"
+   version="1.1"
+   id="svg3"
+   sodipodi:docname="instagram.svg"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     id="namedview3"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="18.984375"
+     inkscape:cx="31.973663"
+     inkscape:cy="32"
+     inkscape:window-width="2560"
+     inkscape:window-height="1417"
+     inkscape:window-x="2552"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3" />
+  <g
+     id="SVGRepo_bgCarrier"
+     stroke-width="0"
+     transform="matrix(1.2884722,0,0,1.2874404,-6.3402771,-6.1835033)" />
+  <g
+     id="SVGRepo_tracerCarrier"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     transform="matrix(1.2884722,0,0,1.2874404,-6.3402771,-6.1835033)"
+     style="stroke-width:0.776424" />
+  <g
+     id="SVGRepo_iconCarrier"
+     transform="matrix(1.2884722,0,0,1.2874404,-6.3402771,-6.1835033)"
+     style="stroke-width:0.776424">
+    <path
+       fill-rule="evenodd"
+       clip-rule="evenodd"
+       d="m 15.5,5 h -6 c -2.20914,0 -4,1.79086 -4,4 v 6 c 0,2.2091 1.79086,4 4,4 h 6 c 2.2091,0 4,-1.7909 4,-4 V 9 c 0,-2.20914 -1.7909,-4 -4,-4 z"
+       stroke="#ffffff"
+       stroke-width="1.16463"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       id="path1" />
+    <path
+       fill-rule="evenodd"
+       clip-rule="evenodd"
+       d="m 12.5,15 c -1.6569,0 -3,-1.3431 -3,-3 0,-1.6569 1.3431,-3 3,-3 1.6569,0 3,1.3431 3,3 0,0.7956 -0.3161,1.5587 -0.8787,2.1213 C 14.0587,14.6839 13.2956,15 12.5,15 Z"
+       stroke="#ffffff"
+       stroke-width="1.16463"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       id="path2" />
+    <rect
+       x="15.5"
+       y="9"
+       width="2"
+       height="2"
+       rx="0.77673501"
+       transform="rotate(-90,15.5,9)"
+       fill="#ffffff"
+       id="rect2"
+       style="stroke-width:0.776424"
+       ry="0.77611303" />
+    <rect
+       x="16"
+       y="8.5"
+       width="1"
+       height="1"
+       rx="0.3883675"
+       transform="rotate(-90,16,8.5)"
+       stroke="#ffffff"
+       stroke-linecap="round"
+       id="rect3"
+       style="stroke-width:0.776424"
+       ry="0.38805652" />
+  </g>
+</svg>
